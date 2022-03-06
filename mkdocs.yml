@@ -1,0 +1,59 @@
+
+# Project information
+site_name: PyToolbox
+site_description: Toolbox for all things Python
+site_author: Brian McCrillis
+site_url: https://brianmccrillis.com/
+
+# Repository
+repo_name: squidfunk/mkdocs-material
+repo_url: https://github.com/squidfunk/mkdocs-material
+edit_uri: ""
+#dev_addr: "0.0.0.0:8000"
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    #- navigation.sections
+    #- navigation.expand
+
+# markdown
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+
+# page tree
+nav:
+  - Home: index.md
+  - ToolBox:
+    - Data:
+        - Data Exploration:
+            - EDA: data/eda.md
+            - Binning: data/binning.md
+            - Sorting: data/sorting.md
+            - Data Scale: data/data_scale.md
+        - ETL:
+          - Extract: etl/extract.md
+          - Transform: etl/transform.md
+          - Load: etl/load.md
+          - Pipelines: etl/pipelines.md
+        - Data Formats:
+            - Files: data/fileformats.md
+    - Scheduling:
+        - schedule/scheduling.md
+    - Viz: viz/viz.md
+    - BI: bi/bi.md
+    - ML: ml/ml.md
+    - Crypto:
+        -  crypto/encryption.md
+        -  crypto/hashing.md
+        -  crypto/steganography.md
+    - Blogs: blogs/blogs.md
