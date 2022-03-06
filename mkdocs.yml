@@ -6,8 +6,8 @@ site_author: Brian McCrillis
 site_url: https://brianmccrillis.com/
 
 # Repository
-repo_name: squidfunk/mkdocs-material
-repo_url: https://github.com/squidfunk/mkdocs-material
+repo_name: b-mc2/PyToolbox
+repo_url: https://github.com/b-mc2/b-mc2.github.io
 edit_uri: ""
 #dev_addr: "0.0.0.0:8000"
 
