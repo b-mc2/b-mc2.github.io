@@ -6,4 +6,4 @@ This is in no way complete and many sections have not been filled out yet.
 Go to [ToolBox]
 
 
-[ToolBox]: site/data/eda/
+[ToolBox]: data/eda/
