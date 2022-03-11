@@ -137,7 +137,45 @@ chrome_options = Options()
 chrome_options.add_argument("--headless")
 ```
 ---
+### Pandas
+
+Pandas can be used to extract HTML tables from webpages
+
+```python
+import pandas as pd
+
+url = "https://example.com"
+table_list = pd.read_html(url)
+
+# table_list will contain a list of pandas df's for each table on the page. 
+# if the page uses HTML tables for layout purposes and not necessarily for storing data
+# it likely won't look good or be useful as is.
+
+# it's also faster to grab the page with requests and parse with pandas afterwards
+response = requests.get(url)
+if response.status_code == 200:
+    table_list = pd.read_html(response.content)
+```
+
+---
 ## APIs
+
+Most APIs accessible with an HTTP request can be accessed with Requests
+```python
+url = "https://api.example.com/somevalue"
+
+response = requests.get(url)
+# returns a response object
+# The content from an API is most likely going to be JSON, check status code first
+if response.status_code == 200:
+    json_data = response.json()
+
+# if you are pulling from a private API you can try using a unique useragent.
+useragent = {'User-Agent': 'Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727)'}
+response = requests.get(url, headers=useragent)
+
+```
+
 
 ---
 ## Databases
@@ -223,6 +261,7 @@ More parameters on reading files can be found here [Real Python Tutorial]("https
 ```python
 with open('dog_breeds.txt', 'r') as reader:
     # Further file processing goes here
+    pass
 ```
 additional parameters include:
 

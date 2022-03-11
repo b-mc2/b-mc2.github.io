@@ -65,40 +65,5 @@ if __name__ == "__main__":
         bonobo.run(get_graph())
 ```
 
-___
-## Bonobo
-[Documentation]("https://www.bonobo-project.org/")
-
-Bonobo is a lightweight Extract-Transform-Load (ETL) framework for Python 3.5+.
-It provides tools for building data transformation pipelines, using plain python primitives, and executing them in parallel.
-Bonobo is the swiss army knife for everyday's data.
-
-```python
-import datetime
-import time
-
-import bonobo
-
-
-def extract():
-    """Placeholder, change, rename, remove... """
-    for x in range(60):
-        if x:
-            time.sleep(1)
-        yield datetime.datetime.now()
-
-
-def get_graph():
-    graph = bonobo.Graph()
-    graph.add_chain(extract, print)
-
-    return graph
-
-
-if __name__ == "__main__":
-    parser = bonobo.get_argument_parser()
-    with bonobo.parse_args(parser):
-        bonobo.run(get_graph())
-```
 
 ___

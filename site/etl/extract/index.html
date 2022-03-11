@@ -562,6 +562,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#pandas" class="md-nav__link">
+    Pandas
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -617,7 +624,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pandas" class="md-nav__link">
+  <a href="#pandas_1" class="md-nav__link">
     Pandas
   </a>
   
@@ -644,7 +651,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pandas_1" class="md-nav__link">
+  <a href="#pandas_2" class="md-nav__link">
     Pandas
   </a>
   
@@ -1021,6 +1028,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#pandas" class="md-nav__link">
+    Pandas
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1076,7 +1090,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pandas" class="md-nav__link">
+  <a href="#pandas_1" class="md-nav__link">
     Pandas
   </a>
   
@@ -1103,7 +1117,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pandas_1" class="md-nav__link">
+  <a href="#pandas_2" class="md-nav__link">
     Pandas
   </a>
   
@@ -1250,7 +1264,38 @@ To use without actually opening a window and save CPU use Chrome driver in <code
 <span class="n">chrome_options</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--headless&quot;</span><span class="p">)</span>
 </code></pre></div></p>
 <hr />
+<h3 id="pandas">Pandas</h3>
+<p>Pandas can be used to extract HTML tables from webpages</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://example.com&quot;</span>
+<span class="n">table_list</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># table_list will contain a list of pandas df&#39;s for each table on the page. </span>
+<span class="c1"># if the page uses HTML tables for layout purposes and not necessarily for storing data</span>
+<span class="c1"># it likely won&#39;t look good or be useful as is.</span>
+
+<span class="c1"># it&#39;s also faster to grab the page with requests and parse with pandas afterwards</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="n">table_list</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div>
+
+<hr />
 <h2 id="apis">APIs</h2>
+<p>Most APIs accessible with an HTTP request can be accessed with Requests
+<div class="highlight"><pre><span></span><code><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://api.example.com/somevalue&quot;</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="c1"># returns a response object</span>
+<span class="c1"># The content from an API is most likely going to be JSON, check status code first</span>
+<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="n">json_data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="c1"># if you are pulling from a private API you can try using a unique useragent.</span>
+<span class="n">useragent</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727)&#39;</span><span class="p">}</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">useragent</span><span class="p">)</span>
+</code></pre></div></p>
 <hr />
 <h2 id="databases">Databases</h2>
 <h3 id="sqlite3">SQLite3</h3>
@@ -1303,7 +1348,7 @@ To use without actually opening a window and save CPU use Chrome driver in <code
 <span class="n">ResultSet</span> <span class="o">=</span> <span class="n">ResultProxy</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 </code></pre></div>
 Additional Querying tutorial <a href="https://towardsdatascience.com/sqlalchemy-python-tutorial-79a577141a91">SQLAlchemy — Python Tutorial</a></p>
-<h3 id="pandas">Pandas</h3>
+<h3 id="pandas_1">Pandas</h3>
 <p><a href="https://pandas.pydata.org/docs/">Documentation</a></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># import the modules</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
@@ -1324,6 +1369,7 @@ Additional Querying tutorial <a href="https://towardsdatascience.com/sqlalchemy-
 More parameters on reading files can be found here <a href="" title="https://realpython.com/read-write-files-python/#opening-and-closing-a-file-in-python">Real Python Tutorial</a>
 <div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;dog_breeds.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">reader</span><span class="p">:</span>
     <span class="c1"># Further file processing goes here</span>
+    <span class="k">pass</span>
 </code></pre></div>
 additional parameters include:</p>
 <table>
@@ -1348,7 +1394,7 @@ additional parameters include:</p>
 </tr>
 </tbody>
 </table>
-<h3 id="pandas_1">Pandas</h3>
+<h3 id="pandas_2">Pandas</h3>
 <p><a href="https://pandas.pydata.org/docs/">Documentation</a></p>
 <p>Pandas can read many types of flat files including <code>csv</code>, <code>parquet</code>, <code>xlsx</code>, <code>txt</code>, <code>pickle</code>, <code>clipboard</code>, <code>xml</code>, <code>html</code>, <code>json</code> and others.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>

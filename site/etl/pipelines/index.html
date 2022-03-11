@@ -589,13 +589,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#bonobo_1" class="md-nav__link">
-    Bonobo
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -905,13 +898,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#bonobo_1" class="md-nav__link">
-    Bonobo
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -955,39 +941,6 @@ dependency resolution, workflow management, visualization, handling failures, co
 
 <hr />
 <h2 id="bonobo">Bonobo</h2>
-<p><a href="" title="https://www.bonobo-project.org/">Documentation</a></p>
-<p>Bonobo is a lightweight Extract-Transform-Load (ETL) framework for Python 3.5+.
-It provides tools for building data transformation pipelines, using plain python primitives, and executing them in parallel.
-Bonobo is the swiss army knife for everyday's data.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">datetime</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="kn">import</span> <span class="nn">bonobo</span>
-
-
-<span class="k">def</span> <span class="nf">extract</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Placeholder, change, rename, remove... &quot;&quot;&quot;</span>
-    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">60</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">x</span><span class="p">:</span>
-            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-        <span class="k">yield</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-
-
-<span class="k">def</span> <span class="nf">get_graph</span><span class="p">():</span>
-    <span class="n">graph</span> <span class="o">=</span> <span class="n">bonobo</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
-    <span class="n">graph</span><span class="o">.</span><span class="n">add_chain</span><span class="p">(</span><span class="n">extract</span><span class="p">,</span> <span class="nb">print</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">graph</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">parser</span> <span class="o">=</span> <span class="n">bonobo</span><span class="o">.</span><span class="n">get_argument_parser</span><span class="p">()</span>
-    <span class="k">with</span> <span class="n">bonobo</span><span class="o">.</span><span class="n">parse_args</span><span class="p">(</span><span class="n">parser</span><span class="p">):</span>
-        <span class="n">bonobo</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">get_graph</span><span class="p">())</span>
-</code></pre></div>
-
-<hr />
-<h2 id="bonobo_1">Bonobo</h2>
 <p><a href="" title="https://www.bonobo-project.org/">Documentation</a></p>
 <p>Bonobo is a lightweight Extract-Transform-Load (ETL) framework for Python 3.5+.
 It provides tools for building data transformation pipelines, using plain python primitives, and executing them in parallel.
