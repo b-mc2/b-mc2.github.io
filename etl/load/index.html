@@ -13,7 +13,7 @@
         <meta name="author" content="Brian McCrillis">
       
       
-        <link rel="canonical" href="https://brianmccrillis.com/etl/load/">
+        <link rel="canonical" href="https://projects.brianmccrillis.com/etl/load/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
@@ -293,6 +293,8 @@
       
       
       
+        
+          
         
           
         
@@ -767,11 +769,25 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../nlp/nlp/" class="md-nav__link">
+        NLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
       
       
       
@@ -784,13 +800,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_6">
+        <label class="md-nav__link" for="__nav_2_7">
           Crypto
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Crypto" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_6">
+        <label class="md-nav__title" for="__nav_2_7">
           <span class="md-nav__icon md-icon"></span>
           Crypto
         </label>
@@ -931,10 +947,20 @@
 <p>Give print a file keyword argument, where the value of the argument is a file stream. We can create a file stream using the open function
 <div class="highlight"><pre><span></span><code><span class="c1"># use file=open() to direct the output to the file location</span>
 <span class="c1"># using &quot;a&quot; appends or creates the file</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;output.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">))</span>
+
 <span class="n">some_text</span> <span class="o">=</span> <span class="s2">&quot;This is a string of something I want to save&quot;</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="n">some_text</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;output.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">))</span>
-</code></pre></div></p>
+</code></pre></div>
+Using <code>a</code> with python's <code>open()</code> command will append the data to a new line separated by a line break
+this actually is exactly how <code>JSONL</code> documents are formated, where each new line is valid JSON. So running the 
+following will build valid <code>JSONL</code> documents.</p>
+<div class="highlight"><pre><span></span><code><span class="n">some_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span><span class="s2">&quot;Alice&quot;</span><span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">some_dict</span><span class="p">),</span> <span class="n">file</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;logs.jsonl&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">))</span>
+</code></pre></div>
                 
               
               

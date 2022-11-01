@@ -13,7 +13,7 @@
         <meta name="author" content="Brian McCrillis">
       
       
-        <link rel="canonical" href="https://brianmccrillis.com/etl/extract/">
+        <link rel="canonical" href="https://projects.brianmccrillis.com/etl/extract/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
@@ -308,6 +308,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2">
@@ -555,9 +557,102 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-usage-of-mechanicalsoup-to-get-the-results-from-duckduckgo-import-mechanicalsoup-connect-to-duckduckgo-browser-mechanicalsoupstatefulbrowseruser_agentmechanicalsoup-need-to-use-the-non-js-version-of-ddg-since-python-cant-render-js-browseropenhttpshtmlduckduckgocomhtml-methods-available-to-browser-browserabsolute_url-browserget_cookiejar-browserlinks-browserput-browserset_user_agent-browseradd_soup-browserget_current_form-browserlist_links-browserraise_on_404-browserset_verbose-browserclose-browserget_current_page-browsernew_control-browserrefresh-browsersoup_config-browserdownload_link-browserget_debug-browseropen-browserrequest-browsersubmit-browserfind_link-browserget_request_kwargs-browseropen_fake_page-browserselect_form-browsersubmit_selected-browserfollow_link-browserget_url-browseropen_relative-browsersession-browserurl-browserform-browserget_verbose-browserpage-browserset_cookiejar-browserget-browserlaunch_browser-browserpost-browserset_debug-fill-in-the-search-form-browserselect_formsearch_form_homepage-this-will-open-a-browser-to-show-the-html-currently-selected-in-the-browser-object-browserlaunch_browser-browserq-mechanicalsoup-browsersubmit_selected-display-the-results-for-link-in-browserpageselectaresult__a-printlinktext-linkattrshref" class="md-nav__link">
+    &quot;&quot;&quot;
+Example usage of MechanicalSoup to get the results from DuckDuckGo.
+&quot;&quot;&quot;
+import mechanicalsoup
+
+
+# Connect to duckduckgo
+browser = mechanicalsoup.StatefulBrowser(user_agent=&quot;MechanicalSoup&quot;)
+# Need to use the non JS version of DDG since Python can&#39;t render JS
+browser.open(&quot;https://html.duckduckgo.com/html/&quot;)
+
+# methods available to browser
+# browser.absolute_url(        browser.get_cookiejar(       browser.links(               browser.put(                 browser.set_user_agent(
+# browser.add_soup(            browser.get_current_form(    browser.list_links(          browser.raise_on_404         browser.set_verbose(
+# browser.close(               browser.get_current_page(    browser.new_control(         browser.refresh(             browser.soup_config
+# browser.download_link(       browser.get_debug(           browser.open(                browser.request(             browser.submit(
+# browser.find_link(           browser.get_request_kwargs(  browser.open_fake_page(      browser.select_form(         browser.submit_selected(
+# browser.follow_link(         browser.get_url(             browser.open_relative(       browser.session              browser.url
+# browser.form                 browser.get_verbose(         browser.page(                browser.set_cookiejar(       
+# browser.get(                 browser.launch_browser(      browser.post(                browser.set_debug(
+
+# Fill-in the search form
+browser.select_form(&#39;#search_form_homepage&#39;)
+
+# this will open a browser to show the HTML currently selected in the browser object
+browser.launch_browser()
+
+browser[&quot;q&quot;] = &quot;MechanicalSoup&quot;
+browser.submit_selected()
+
+# Display the results
+for link in browser.page.select(&#39;a.result__a&#39;):
+    print(link.text, &#39;-&gt;&#39;, link.attrs[&#39;href&#39;])
+
+  </a>
+  
+    <nav class="md-nav" aria-label="&quot;&quot;&quot;
+Example usage of MechanicalSoup to get the results from DuckDuckGo.
+&quot;&quot;&quot;
+import mechanicalsoup
+
+
+# Connect to duckduckgo
+browser = mechanicalsoup.StatefulBrowser(user_agent=&quot;MechanicalSoup&quot;)
+# Need to use the non JS version of DDG since Python can&#39;t render JS
+browser.open(&quot;https://html.duckduckgo.com/html/&quot;)
+
+# methods available to browser
+# browser.absolute_url(        browser.get_cookiejar(       browser.links(               browser.put(                 browser.set_user_agent(
+# browser.add_soup(            browser.get_current_form(    browser.list_links(          browser.raise_on_404         browser.set_verbose(
+# browser.close(               browser.get_current_page(    browser.new_control(         browser.refresh(             browser.soup_config
+# browser.download_link(       browser.get_debug(           browser.open(                browser.request(             browser.submit(
+# browser.find_link(           browser.get_request_kwargs(  browser.open_fake_page(      browser.select_form(         browser.submit_selected(
+# browser.follow_link(         browser.get_url(             browser.open_relative(       browser.session              browser.url
+# browser.form                 browser.get_verbose(         browser.page(                browser.set_cookiejar(       
+# browser.get(                 browser.launch_browser(      browser.post(                browser.set_debug(
+
+# Fill-in the search form
+browser.select_form(&#39;#search_form_homepage&#39;)
+
+# this will open a browser to show the HTML currently selected in the browser object
+browser.launch_browser()
+
+browser[&quot;q&quot;] = &quot;MechanicalSoup&quot;
+browser.submit_selected()
+
+# Display the results
+for link in browser.page.select(&#39;a.result__a&#39;):
+    print(link.text, &#39;-&gt;&#39;, link.attrs[&#39;href&#39;])
+">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#splinter" class="md-nav__link">
+    Splinter
+  </a>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#selenium" class="md-nav__link">
     Selenium
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandas" class="md-nav__link">
+    Pandas
   </a>
   
 </li>
@@ -617,8 +712,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pandas" class="md-nav__link">
+  <a href="#pandas_1" class="md-nav__link">
     Pandas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyspark" class="md-nav__link">
+    PySpark
   </a>
   
 </li>
@@ -644,7 +746,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pandas_1" class="md-nav__link">
+  <a href="#pandas_2" class="md-nav__link">
     Pandas
   </a>
   
@@ -869,11 +971,25 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../nlp/nlp/" class="md-nav__link">
+        NLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
       
       
       
@@ -886,13 +1002,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_6">
+        <label class="md-nav__link" for="__nav_2_7">
           Crypto
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Crypto" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_6">
+        <label class="md-nav__title" for="__nav_2_7">
           <span class="md-nav__icon md-icon"></span>
           Crypto
         </label>
@@ -1014,9 +1130,102 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-usage-of-mechanicalsoup-to-get-the-results-from-duckduckgo-import-mechanicalsoup-connect-to-duckduckgo-browser-mechanicalsoupstatefulbrowseruser_agentmechanicalsoup-need-to-use-the-non-js-version-of-ddg-since-python-cant-render-js-browseropenhttpshtmlduckduckgocomhtml-methods-available-to-browser-browserabsolute_url-browserget_cookiejar-browserlinks-browserput-browserset_user_agent-browseradd_soup-browserget_current_form-browserlist_links-browserraise_on_404-browserset_verbose-browserclose-browserget_current_page-browsernew_control-browserrefresh-browsersoup_config-browserdownload_link-browserget_debug-browseropen-browserrequest-browsersubmit-browserfind_link-browserget_request_kwargs-browseropen_fake_page-browserselect_form-browsersubmit_selected-browserfollow_link-browserget_url-browseropen_relative-browsersession-browserurl-browserform-browserget_verbose-browserpage-browserset_cookiejar-browserget-browserlaunch_browser-browserpost-browserset_debug-fill-in-the-search-form-browserselect_formsearch_form_homepage-this-will-open-a-browser-to-show-the-html-currently-selected-in-the-browser-object-browserlaunch_browser-browserq-mechanicalsoup-browsersubmit_selected-display-the-results-for-link-in-browserpageselectaresult__a-printlinktext-linkattrshref" class="md-nav__link">
+    &quot;&quot;&quot;
+Example usage of MechanicalSoup to get the results from DuckDuckGo.
+&quot;&quot;&quot;
+import mechanicalsoup
+
+
+# Connect to duckduckgo
+browser = mechanicalsoup.StatefulBrowser(user_agent=&quot;MechanicalSoup&quot;)
+# Need to use the non JS version of DDG since Python can&#39;t render JS
+browser.open(&quot;https://html.duckduckgo.com/html/&quot;)
+
+# methods available to browser
+# browser.absolute_url(        browser.get_cookiejar(       browser.links(               browser.put(                 browser.set_user_agent(
+# browser.add_soup(            browser.get_current_form(    browser.list_links(          browser.raise_on_404         browser.set_verbose(
+# browser.close(               browser.get_current_page(    browser.new_control(         browser.refresh(             browser.soup_config
+# browser.download_link(       browser.get_debug(           browser.open(                browser.request(             browser.submit(
+# browser.find_link(           browser.get_request_kwargs(  browser.open_fake_page(      browser.select_form(         browser.submit_selected(
+# browser.follow_link(         browser.get_url(             browser.open_relative(       browser.session              browser.url
+# browser.form                 browser.get_verbose(         browser.page(                browser.set_cookiejar(       
+# browser.get(                 browser.launch_browser(      browser.post(                browser.set_debug(
+
+# Fill-in the search form
+browser.select_form(&#39;#search_form_homepage&#39;)
+
+# this will open a browser to show the HTML currently selected in the browser object
+browser.launch_browser()
+
+browser[&quot;q&quot;] = &quot;MechanicalSoup&quot;
+browser.submit_selected()
+
+# Display the results
+for link in browser.page.select(&#39;a.result__a&#39;):
+    print(link.text, &#39;-&gt;&#39;, link.attrs[&#39;href&#39;])
+
+  </a>
+  
+    <nav class="md-nav" aria-label="&quot;&quot;&quot;
+Example usage of MechanicalSoup to get the results from DuckDuckGo.
+&quot;&quot;&quot;
+import mechanicalsoup
+
+
+# Connect to duckduckgo
+browser = mechanicalsoup.StatefulBrowser(user_agent=&quot;MechanicalSoup&quot;)
+# Need to use the non JS version of DDG since Python can&#39;t render JS
+browser.open(&quot;https://html.duckduckgo.com/html/&quot;)
+
+# methods available to browser
+# browser.absolute_url(        browser.get_cookiejar(       browser.links(               browser.put(                 browser.set_user_agent(
+# browser.add_soup(            browser.get_current_form(    browser.list_links(          browser.raise_on_404         browser.set_verbose(
+# browser.close(               browser.get_current_page(    browser.new_control(         browser.refresh(             browser.soup_config
+# browser.download_link(       browser.get_debug(           browser.open(                browser.request(             browser.submit(
+# browser.find_link(           browser.get_request_kwargs(  browser.open_fake_page(      browser.select_form(         browser.submit_selected(
+# browser.follow_link(         browser.get_url(             browser.open_relative(       browser.session              browser.url
+# browser.form                 browser.get_verbose(         browser.page(                browser.set_cookiejar(       
+# browser.get(                 browser.launch_browser(      browser.post(                browser.set_debug(
+
+# Fill-in the search form
+browser.select_form(&#39;#search_form_homepage&#39;)
+
+# this will open a browser to show the HTML currently selected in the browser object
+browser.launch_browser()
+
+browser[&quot;q&quot;] = &quot;MechanicalSoup&quot;
+browser.submit_selected()
+
+# Display the results
+for link in browser.page.select(&#39;a.result__a&#39;):
+    print(link.text, &#39;-&gt;&#39;, link.attrs[&#39;href&#39;])
+">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#splinter" class="md-nav__link">
+    Splinter
+  </a>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#selenium" class="md-nav__link">
     Selenium
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandas" class="md-nav__link">
+    Pandas
   </a>
   
 </li>
@@ -1076,8 +1285,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pandas" class="md-nav__link">
+  <a href="#pandas_1" class="md-nav__link">
     Pandas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyspark" class="md-nav__link">
+    PySpark
   </a>
   
 </li>
@@ -1103,7 +1319,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pandas_1" class="md-nav__link">
+  <a href="#pandas_2" class="md-nav__link">
     Pandas
   </a>
   
@@ -1158,7 +1374,7 @@ When pulling from <code>Requests</code> you can use:
 <h3 id="mechanicalsoup">MechanicalSoup</h3>
 <p><a href="https://mechanicalsoup.readthedocs.io/en/stable/">Documentation</a></p>
 <p>A Python library for automating interaction with websites. MechanicalSoup automatically stores and sends cookies, follows redirects, and can follow links and submit forms. It doesn’t do Javascript.</p>
-<div class="highlight"><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
+<h2 id="example-usage-of-mechanicalsoup-to-get-the-results-from-duckduckgo-import-mechanicalsoup-connect-to-duckduckgo-browser-mechanicalsoupstatefulbrowseruser_agentmechanicalsoup-need-to-use-the-non-js-version-of-ddg-since-python-cant-render-js-browseropenhttpshtmlduckduckgocomhtml-methods-available-to-browser-browserabsolute_url-browserget_cookiejar-browserlinks-browserput-browserset_user_agent-browseradd_soup-browserget_current_form-browserlist_links-browserraise_on_404-browserset_verbose-browserclose-browserget_current_page-browsernew_control-browserrefresh-browsersoup_config-browserdownload_link-browserget_debug-browseropen-browserrequest-browsersubmit-browserfind_link-browserget_request_kwargs-browseropen_fake_page-browserselect_form-browsersubmit_selected-browserfollow_link-browserget_url-browseropen_relative-browsersession-browserurl-browserform-browserget_verbose-browserpage-browserset_cookiejar-browserget-browserlaunch_browser-browserpost-browserset_debug-fill-in-the-search-form-browserselect_formsearch_form_homepage-this-will-open-a-browser-to-show-the-html-currently-selected-in-the-browser-object-browserlaunch_browser-browserq-mechanicalsoup-browsersubmit_selected-display-the-results-for-link-in-browserpageselectaresult__a-printlinktext-linkattrshref"><div class="highlight"><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Example usage of MechanicalSoup to get the results from DuckDuckGo.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">mechanicalsoup</span>
@@ -1191,8 +1407,46 @@ When pulling from <code>Requests</code> you can use:
 <span class="c1"># Display the results</span>
 <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">browser</span><span class="o">.</span><span class="n">page</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;a.result__a&#39;</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">link</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span> <span class="n">link</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">])</span>
-</code></pre></div>
+</code></pre></div></h2>
+<h3 id="splinter">Splinter</h3>
+<p><a href="https://splinter.readthedocs.io/en/latest/">Documentation</a></p>
+<p>Splinter is a Python framework that provides a simple and consistent interface for web application automation.
+Splinter can use Selenium-based Drivers, chrome, fireFox, edge, or remote, the python bindings for Selenium 3 or Selenium 4 must be installed. 
+It can also use Django and Flask based drivers.</p>
+<p><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">splinter</span> <span class="kn">import</span> <span class="n">Browser</span>
 
+
+<span class="n">browser</span> <span class="o">=</span> <span class="n">Browser</span><span class="p">(</span><span class="s1">&#39;firefox&#39;</span><span class="p">)</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">visit</span><span class="p">(</span><span class="s1">&#39;http://google.com&#39;</span><span class="p">)</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">find_by_name</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="s1">&#39;splinter - python acceptance testing for web applications&#39;</span><span class="p">)</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">find_by_name</span><span class="p">(</span><span class="s1">&#39;btnK&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">browser</span><span class="o">.</span><span class="n">is_text_present</span><span class="p">(</span><span class="s1">&#39;splinter.readthedocs.io&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Yes, the official website was found!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No, it wasn&#39;t found... We need to improve our SEO techniques&quot;</span><span class="p">)</span>
+
+<span class="n">browser</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</code></pre></div>
+You can easily execute JavaScript, in drivers which support it:
+<div class="highlight"><pre><span></span><code><span class="n">browser</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span><span class="s2">&quot;$(&#39;body&#39;).empty()&quot;</span><span class="p">)</span>
+</code></pre></div>
+You can return the result of the script:
+<div class="highlight"><pre><span></span><code><span class="n">browser</span><span class="o">.</span><span class="n">evaluate_script</span><span class="p">(</span><span class="s2">&quot;4+4&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">8</span>
+</code></pre></div>
+Some text input actions cannot be “typed” thru browser.fill(), like new lines and tab characters. Below is en example how to work around this using browser.execute_script(). This is also much faster than browser.fill() as there is no simulated key typing delay, making it suitable for longer texts.
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fast_fill_by_javascript</span><span class="p">(</span><span class="n">browser</span><span class="p">:</span> <span class="n">DriverAPI</span><span class="p">,</span> <span class="n">elem_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Fill text field with copy-paste, not by typing key by key.</span>
+<span class="sd">    Otherwise you cannot type enter or tab.</span>
+<span class="sd">    :param id: CSS id of the textarea element to fill</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">t&quot;</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">n&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Construct a JavaScript snippet that is executed on the browser sdie</span>
+    <span class="n">snippet</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;document.querySelector(&quot;#</span><span class="si">{</span><span class="n">elem_id</span><span class="si">}</span><span class="s2">&quot;).value = &quot;</span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;;&quot;&quot;&quot;</span>
+    <span class="n">browser</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span><span class="n">snippet</span><span class="p">)</span>
+</code></pre></div></p>
 <hr />
 <h3 id="selenium">Selenium</h3>
 <p><a href="https://selenium-python.readthedocs.io/">Documentation</a></p>
@@ -1250,7 +1504,38 @@ To use without actually opening a window and save CPU use Chrome driver in <code
 <span class="n">chrome_options</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--headless&quot;</span><span class="p">)</span>
 </code></pre></div></p>
 <hr />
+<h3 id="pandas">Pandas</h3>
+<p>Pandas can be used to extract HTML tables from webpages</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://example.com&quot;</span>
+<span class="n">table_list</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># table_list will contain a list of pandas df&#39;s for each table on the page. </span>
+<span class="c1"># if the page uses HTML tables for layout purposes and not necessarily for storing data</span>
+<span class="c1"># it likely won&#39;t look good or be useful as is.</span>
+
+<span class="c1"># it&#39;s also faster to grab the page with requests and parse with pandas afterwards</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="n">table_list</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div>
+
+<hr />
 <h2 id="apis">APIs</h2>
+<p>Most APIs accessible with an HTTP request can be accessed with Requests
+<div class="highlight"><pre><span></span><code><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://api.example.com/somevalue&quot;</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="c1"># returns a response object</span>
+<span class="c1"># The content from an API is most likely going to be JSON, check status code first</span>
+<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="n">json_data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="c1"># if you are pulling from a private API you can try using a unique useragent.</span>
+<span class="n">useragent</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727)&#39;</span><span class="p">}</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">useragent</span><span class="p">)</span>
+</code></pre></div></p>
 <hr />
 <h2 id="databases">Databases</h2>
 <h3 id="sqlite3">SQLite3</h3>
@@ -1303,7 +1588,7 @@ To use without actually opening a window and save CPU use Chrome driver in <code
 <span class="n">ResultSet</span> <span class="o">=</span> <span class="n">ResultProxy</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 </code></pre></div>
 Additional Querying tutorial <a href="https://towardsdatascience.com/sqlalchemy-python-tutorial-79a577141a91">SQLAlchemy — Python Tutorial</a></p>
-<h3 id="pandas">Pandas</h3>
+<h3 id="pandas_1">Pandas</h3>
 <p><a href="https://pandas.pydata.org/docs/">Documentation</a></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># import the modules</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
@@ -1317,6 +1602,11 @@ Additional Querying tutorial <a href="https://towardsdatascience.com/sqlalchemy-
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </code></pre></div>
 
+<h3 id="pyspark">PySpark</h3>
+<p><a href="https://pandas.pydata.org/docs/">Documentation</a></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># import the modules</span>
+</code></pre></div>
+
 <hr />
 <h2 id="flat-files">Flat Files</h2>
 <h3 id="python">Python</h3>
@@ -1324,6 +1614,7 @@ Additional Querying tutorial <a href="https://towardsdatascience.com/sqlalchemy-
 More parameters on reading files can be found here <a href="" title="https://realpython.com/read-write-files-python/#opening-and-closing-a-file-in-python">Real Python Tutorial</a>
 <div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;dog_breeds.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">reader</span><span class="p">:</span>
     <span class="c1"># Further file processing goes here</span>
+    <span class="k">pass</span>
 </code></pre></div>
 additional parameters include:</p>
 <table>
@@ -1348,7 +1639,7 @@ additional parameters include:</p>
 </tr>
 </tbody>
 </table>
-<h3 id="pandas_1">Pandas</h3>
+<h3 id="pandas_2">Pandas</h3>
 <p><a href="https://pandas.pydata.org/docs/">Documentation</a></p>
 <p>Pandas can read many types of flat files including <code>csv</code>, <code>parquet</code>, <code>xlsx</code>, <code>txt</code>, <code>pickle</code>, <code>clipboard</code>, <code>xml</code>, <code>html</code>, <code>json</code> and others.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
