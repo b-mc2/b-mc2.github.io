@@ -73,6 +73,52 @@ browser.submit_selected()
 for link in browser.page.select('a.result__a'):
     print(link.text, '->', link.attrs['href'])
 ```
+---
+### Splinter
+[Documentation](https://splinter.readthedocs.io/en/latest/)
+
+Splinter is a Python framework that provides a simple and consistent interface for web application automation.
+Splinter can use Selenium-based Drivers, chrome, fireFox, edge, or remote, the python bindings for Selenium 3 or Selenium 4 must be installed. 
+It can also use Django and Flask based drivers.
+
+```python
+from splinter import Browser
+
+
+browser = Browser('firefox')
+browser.visit('http://google.com')
+browser.find_by_name('q').fill('splinter - python acceptance testing for web applications')
+browser.find_by_name('btnK').click()
+
+if browser.is_text_present('splinter.readthedocs.io'):
+    print("Yes, the official website was found!")
+else:
+    print("No, it wasn't found... We need to improve our SEO techniques")
+
+browser.quit()
+```
+You can easily execute JavaScript, in drivers which support it:
+```python
+browser.execute_script("$('body').empty()")
+```
+You can return the result of the script:
+```python
+browser.evaluate_script("4+4") == 8
+```
+Some text input actions cannot be “typed” thru browser.fill(), like new lines and tab characters. Below is en example how to work around this using browser.execute_script(). This is also much faster than browser.fill() as there is no simulated key typing delay, making it suitable for longer texts.
+```python
+def fast_fill_by_javascript(browser: DriverAPI, elem_id: str, text: str):
+    """Fill text field with copy-paste, not by typing key by key.
+    Otherwise you cannot type enter or tab.
+    :param id: CSS id of the textarea element to fill
+    """
+    text = text.replace("\t", "\\t")
+    text = text.replace("\n", "\\n")
+
+    # Construct a JavaScript snippet that is executed on the browser sdie
+    snippet = f"""document.querySelector("#{elem_id}").value = "{text}";"""
+    browser.execute_script(snippet)
+```
 
 ---
 ### Selenium
@@ -250,6 +296,15 @@ cnx = create_engine('sqlite:///contacts.db').connect()
 # table named 'contacts' will be returned as a dataframe.
 df = pd.read_sql_table('contacts', cnx)
 print(df)
+```
+
+### PySpark
+[Documentation](https://pandas.pydata.org/docs/)
+
+
+```python
+# import the modules
+
 ```
 
 

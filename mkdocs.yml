@@ -3,7 +3,7 @@
 site_name: PyToolbox
 site_description: Toolbox for all things Python
 site_author: Brian McCrillis
-site_url: https://brianmccrillis.com/
+site_url: https://projects.brianmccrillis.com/
 
 # Repository
 repo_name: b-mc2/PyToolbox
@@ -52,8 +52,10 @@ nav:
     - Viz: viz/viz.md
     - BI: bi/bi.md
     - ML: ml/ml.md
+    - NLP: nlp/nlp.md
     - Crypto:
         -  crypto/encryption.md
         -  crypto/hashing.md
         -  crypto/steganography.md
     - Blogs: blogs/blogs.md
+    - Snippets: blogs/snippets.md

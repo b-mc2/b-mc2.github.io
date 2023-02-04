@@ -52,6 +52,8 @@ Here's some resources I've found and like to reference, I'll try not to list ext
 
 ## Cryptography
 - [https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/](https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/)
+- [https://blintzbase.com/posts/pir-and-fhe-from-scratch/](https://blintzbase.com/posts/pir-and-fhe-from-scratch/)
+- 
 
 
 ## JS/HTML/CSS
@@ -67,3 +69,5 @@ Here's some resources I've found and like to reference, I'll try not to list ext
 - [https://smirkygraphs.github.io/](https://smirkygraphs.github.io/)
 - [http://bluoceans.co/](http://bluoceans.co/)
 - [https://article-summary.herokuapp.com/](https://article-summary.herokuapp.com/)
+- [https://projects.brianmccrillis.com/](https://projects.brianmccrillis.com/)
+- [https://json-humans.fly.dev/](https://json-humans.fly.dev/)

@@ -76,6 +76,63 @@ The homomorphic properties of the paillier crypto system are:
 - Encrypted numbers can be added together.
 - Encrypted numbers can be added to non encrypted scalars.
 
+### Private Information Retrieval
+#### using homomorphic encryption
+[Documentation](https://blintzbase.com/posts/pir-and-fhe-from-scratch/)
+
+1. The client encodes its desired index i=3i=3 in a one-hot encoding. That is, it builds a vector of n=4n=4 bits, where the ii-th bit is 11 and the rest are 00.
+2. The client generates a homomorphic encryption secret key, and uses it to encrypt each bit, producing nn ciphertexts, where the ii-th ciphertext is an encrypted 11, and the rest are encrypted 00's.
+3. The client sends this vector of encrypted bits to the server. To the server, this vector of encrypted bits is completely random noise; it cannot learn anything about the encrypted bits.
+4. The server takes the nn ciphertexts (each encrypting a bit), and homomorphically multiplies them by the corresponding plaintext database item. This produces a total of nn ciphertexts, each encrypting either 0 or the desired database item.
+5. The server homomorphically adds all of these ciphertexts, resulting in a single ciphertext encrypting the desired database item.
+6. The server sends this single ciphertext to the client.
+7. The client decrypts this ciphertext and obtains its desired plaintext item.
+
+![PIR](https://blintzbase.com/images/pir-from-fhe.png)
+
+```python
+n = 512
+q = 3329
+noise_distribution = [-3, 3]
+
+num_items_in_db = 50
+desired_idx = 24
+db = [random_bit() for i in range(num_items_in_db)]
+
+def generate_query(desired_idx):
+    v = []
+    for i in range(num_items_in_db):
+        bit = 1 if i == desired_idx else 0
+        ct = encrypt(s, bit)
+        v.append(ct)
+    return v
+
+def answer_query(query, db):
+    summed_A = zero_matrix(n, n)
+    summed_c = zero_vector(n)
+    for i in range(num_items_in_db):
+        if db[i] == 1:
+            (A, c) = query[i]
+            summed_A += A
+            summed_c += c
+    return (summed_A, summed_c)
+
+s = keygen()
+query = generate_query(desired_idx)
+
+print("Sending the query to the server...")
+
+answer = answer_query(query, db)
+
+print("Got the answer back from the server...")
+
+result = decrypt(s, answer)
+
+print("The item at index %d of the database is %d", desired_idx, result)
+
+assert result == db[desired_idx]
+print("PIR was correct!")
+```
 
 ---
 ## Elliptic Curve Cryptography
