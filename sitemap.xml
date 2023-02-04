@@ -2,112 +2,117 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://projects.brianmccrillis.com/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/bi/bi/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/blogs/blogs/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://projects.brianmccrillis.com/blogs/snippets/</loc>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/crypto/encryption/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/crypto/hashing/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/crypto/steganography/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/data/binning/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/data/data_scale/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/data/eda/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/data/fileformats/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/data/sorting/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/datastorage/datastorage/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/etl/extract/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/etl/load/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/etl/pipelines/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/etl/transform/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/ml/ml/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/ml/nlp/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/nlp/nlp/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/schedule/scheduling/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/viz/viz/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://projects.brianmccrillis.com/web/webscraping/</loc>
-         <lastmod>2022-11-01</lastmod>
+         <lastmod>2023-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

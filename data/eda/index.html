@@ -310,6 +310,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2">
@@ -488,6 +490,13 @@
           <li class="md-nav__item">
   <a href="#dtale" class="md-nav__link">
     Dtale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk" class="md-nav__link">
+    Bulk
   </a>
   
 </li>
@@ -936,6 +945,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blogs/snippets/" class="md-nav__link">
+        Snippets
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1019,6 +1042,13 @@
           <li class="md-nav__item">
   <a href="#dtale" class="md-nav__link">
     Dtale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk" class="md-nav__link">
+    Bulk
   </a>
   
 </li>
@@ -1158,6 +1188,44 @@ Running this command will perform the analysis and create the report object. To 
 
 <p><img alt="Dtale" src="https://raw.githubusercontent.com/aschonfeld/dtale-media/master/gifs/dtale_demo_mini.gif" /></p>
 <hr />
+<h3 id="bulk">Bulk</h3>
+<p><a href="https://github.com/koaning/bulk">Documentation</a></p>
+<p>Bulk is a quick developer tool to apply some bulk labels. Given a prepared dataset with 2d embeddings it can generate an interface that allows you to quickly add some bulk, albeit less precice, annotations.</p>
+<p><img alt="Bulk" src="https://raw.githubusercontent.com/koaning/bulk/main/images/bulk-text.png" /></p>
+<p>To use bulk for text, you'll first need to prepare a csv file first.</p>
+<p>The example below uses embetter to generate the embeddings and umap to reduce the dimensions. But you're totally free to use what-ever text embedding tool that you like. You will need to install these tools seperately. Note that embetter uses sentence-transformers under the hood.</p>
+<p>You can also use Bulk to explore semantic text data.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">umap</span> <span class="kn">import</span> <span class="n">UMAP</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">make_pipeline</span> 
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+
+
+<span class="c1"># pip install &quot;embetter[text]&quot;</span>
+<span class="kn">from</span> <span class="nn">embetter.text</span> <span class="kn">import</span> <span class="n">SentenceEncoder</span>
+
+<span class="c1"># Build a sentence encoder pipeline with UMAP at the end.</span>
+<span class="n">text_emb_pipeline</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span>
+  <span class="n">SentenceEncoder</span><span class="p">(</span><span class="s1">&#39;all-MiniLM-L6-v2&#39;</span><span class="p">),</span>
+  <span class="n">UMAP</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="c1"># Load sentences</span>
+<span class="n">sentences</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;original.csv&quot;</span><span class="p">)[</span><span class="s1">&#39;sentences&#39;</span><span class="p">])</span>
+
+<span class="c1"># Calculate embeddings </span>
+<span class="n">X_tfm</span> <span class="o">=</span> <span class="n">text_emb_pipeline</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span>
+
+<span class="c1"># Write to disk. Note! Text column must be named &quot;text&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="n">sentences</span><span class="p">})</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_tfm</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_tfm</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;ready.csv&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p><code>python -m bulk text ready.csv</code></p>
+<p><code>python -m bulk text ready.csv --keywords "foo,bar,other"</code></p>
+<hr />
 <h2 id="data-exploration-manual">Data Exploration Manual</h2>
 <h3 id="python-pandas">Python Pandas</h3>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -1165,6 +1233,7 @@ Running this command will perform the analysis and create the report object. To 
 <span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </code></pre></div>
 
+<p>More to come...</p>
 <p>More to come...</p>
                 
               

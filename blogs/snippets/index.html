@@ -13,14 +13,14 @@
         <meta name="author" content="Brian McCrillis">
       
       
-        <link rel="canonical" href="https://projects.brianmccrillis.com/schedule/scheduling/">
+        <link rel="canonical" href="https://projects.brianmccrillis.com/blogs/snippets/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
     
     
       
-        <title>Scheduling Tasks - PyToolbox</title>
+        <title>Snippets - PyToolbox</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scheduling-tasks" class="md-skip">
+        <a href="#cool-snippets-of-python-code" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Scheduling Tasks
+              Snippets
             
           </span>
         </div>
@@ -620,14 +620,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
       
       
@@ -652,72 +650,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Scheduling Tasks
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../schedule/scheduling/" class="md-nav__link">
         Scheduling Tasks
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#dagster" class="md-nav__link">
-    Dagster
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prefect" class="md-nav__link">
-    Prefect
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#celery" class="md-nav__link">
-    Celery
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schedule" class="md-nav__link">
-    Schedule
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -875,7 +812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blogs/blogs/" class="md-nav__link">
+      <a href="../blogs/" class="md-nav__link">
         Blogs
       </a>
     </li>
@@ -887,11 +824,51 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../blogs/snippets/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Snippets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Snippets
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -929,29 +906,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dagster" class="md-nav__link">
-    Dagster
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prefect" class="md-nav__link">
-    Prefect
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#celery" class="md-nav__link">
-    Celery
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schedule" class="md-nav__link">
-    Schedule
+  <a href="#python" class="md-nav__link">
+    Python
   </a>
   
 </li>
@@ -969,138 +925,52 @@
               
                 
                 
-                <h1 id="scheduling-tasks">Scheduling Tasks</h1>
-<p>On how to schedule tasks </p>
-<hr />
-<h2 id="dagster">Dagster</h2>
-<p><a href="" title="https://docs.dagster.io/getting-started">Documentation</a></p>
-<p>Dagster is a data orchestrator. It lets you define jobs in terms of the data flow between logical components called ops. These jobs can be developed locally and run anywhere.
-Dagster uses decorators like <code>@op</code> to decorate functions and <code>@job</code> to group <code>@op</code> into a single flow.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">dagster</span> <span class="kn">import</span> <span class="n">job</span><span class="p">,</span> <span class="n">op</span>
+                <h1 id="cool-snippets-of-python-code">Cool Snippets of Python Code</h1>
+<p>Here's some snippets of Code that are cool to reuse.</p>
+<h2 id="python">Python</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a list of combined strings from multiple iterables</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;cherry&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;lemon&#39;</span><span class="p">,</span> <span class="s1">&#39;pineapple&#39;</span><span class="p">)))</span>
+<span class="c1"># [&#39;apple-orange&#39;, &#39;banana-lemon&#39;, &#39;cherry-pineapple&#39;]</span>
 
-<span class="nd">@op</span>
-<span class="k">def</span> <span class="nf">get_name</span><span class="p">():</span>
-    <span class="k">return</span> <span class="s2">&quot;dagster&quot;</span>
+<span class="c1"># filter a list by min value</span>
+<span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">32</span><span class="p">]</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">age</span><span class="p">:</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">,</span> <span class="n">ages</span><span class="p">))</span>
+<span class="c1"># [18, 24, 32]</span>
 
-<span class="nd">@op</span>
-<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+<span class="c1"># create a list of sums of two lists by iterables </span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">sum</span><span class="p">,</span> <span class="nb">zip</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])))</span>
+<span class="c1"># [5, 7, 9]</span>
 
-<span class="nd">@job</span>
-<span class="k">def</span> <span class="nf">hello_dagster</span><span class="p">():</span>
-    <span class="n">hello</span><span class="p">(</span><span class="n">get_name</span><span class="p">())</span>
-</code></pre></div>
+<span class="c1"># join two lists together into list of tuples</span>
+<span class="n">zipped_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]))</span>
+<span class="c1"># [(1, 4), (2, 5), (3, 6)]</span>
 
-<p>Then run with the follow command
-<div class="highlight"><pre><span></span><code>dagit -f hello_world.py
-</code></pre></div>
-Which will serve up a web UI</p>
-<p><img alt="Dagster" src="https://docs.dagster.io/_next/image?url=https%3A%2F%2Fdagster-docs-versioned-content.s3.us-west-1.amazonaws.com%2Fversioned_images%2F0.13.12%2Fgetting-started%2Fdagit-run.png&amp;w=3840&amp;q=75" /></p>
-<hr />
-<h2 id="prefect">Prefect</h2>
-<p><a href="" title="https://orion-docs.prefect.io/">Documentation</a></p>
-<p>Prefect Orion is the second-generation workflow orchestration engine from Prefect, now available as a technical preview.
-Orion has been designed from the ground up to handle the dynamic, scalable workloads that the modern data stack demands. Powered by a brand-new, asynchronous rules engine, it represents an enormous amount of research, development, and dedication to a simple idea:
-You should love your workflows again.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">prefect</span> <span class="kn">import</span> <span class="n">flow</span><span class="p">,</span> <span class="n">task</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
-<span class="kn">import</span> <span class="nn">httpx</span>
+<span class="c1"># unzip a list of tuples</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">zipped_list</span><span class="p">))</span>
+<span class="c1"># [(1, 2, 3), (4, 5, 6)]</span>
 
+<span class="c1"># unzip list of lists</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">zipped_list</span><span class="p">)))</span>
+<span class="c1"># [[1, 2, 3], [4, 5, 6]]</span>
 
-<span class="nd">@task</span><span class="p">(</span><span class="n">retries</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">get_stars</span><span class="p">(</span><span class="n">repo</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://api.github.com/repos/</span><span class="si">{</span><span class="n">repo</span><span class="si">}</span><span class="s2">&quot;</span>
-    <span class="n">count</span> <span class="o">=</span> <span class="n">httpx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;stargazers_count&quot;</span><span class="p">]</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">repo</span><span class="si">}</span><span class="s2"> has </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2"> stars!&quot;</span><span class="p">)</span>
+<span class="c1"># Create dictionary with key,values from two lists</span>
+<span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span>
+<span class="c1"># {&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3}</span>
 
+<span class="c1"># Get max value for each index number across multiple lists</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">max</span><span class="p">,</span> <span class="nb">zip</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">32</span><span class="p">],</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">16</span><span class="p">])))</span>
+<span class="c1"># [14, 12, 32]</span>
 
-<span class="nd">@flow</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Github Stars&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">github_stars</span><span class="p">(</span><span class="n">repos</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
-    <span class="k">for</span> <span class="n">repo</span> <span class="ow">in</span> <span class="n">repos</span><span class="p">:</span>
-        <span class="n">get_stars</span><span class="p">(</span><span class="n">repo</span><span class="p">)</span>
+<span class="c1"># Sort list of dictionaries by specific value</span>
+<span class="n">cars</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="s1">&#39;Ford&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="mi">2005</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="s1">&#39;Mitsubishi&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="mi">2000</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="s1">&#39;BMW&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="mi">2019</span><span class="p">}]</span>
+<span class="n">cars</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">])</span>
+<span class="c1"># [{&#39;car&#39;: &#39;Mitsubishi&#39;, &#39;year&#39;: 2000}, {&#39;car&#39;: &#39;Ford&#39;, &#39;year&#39;: 2005}, {&#39;car&#39;: &#39;VW&#39;, &#39;year&#39;: 2011}]</span>
 
+<span class="c1"># One liner to output a pretty JSON file</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span> <span class="n">file</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;path/to/data.json&quot;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">))</span>
 
-<span class="c1"># run the flow!</span>
-<span class="n">github_stars</span><span class="p">([</span><span class="s2">&quot;PrefectHQ/Prefect&quot;</span><span class="p">,</span> <span class="s2">&quot;PrefectHQ/miter-design&quot;</span><span class="p">])</span>
-</code></pre></div>
-
-<p>Then run with the follow command
-<div class="highlight"><pre><span></span><code>prefect orion start
-</code></pre></div>
-Which will serve up a web UI</p>
-<p><img alt="Prefect Orion" src="https://orion-docs.prefect.io/img/tutorials/hello-orion-dashboard.png" /></p>
-<hr />
-<h2 id="celery">Celery</h2>
-<p><a href="https://docs.celeryproject.org/en/latest/getting-started/first-steps-with-celery.html#application">Documentation</a></p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">celery</span> <span class="kn">import</span> <span class="n">Celery</span>
-
-<span class="n">app</span> <span class="o">=</span> <span class="n">Celery</span><span class="p">(</span><span class="s1">&#39;tasks&#39;</span><span class="p">,</span> <span class="n">broker</span><span class="o">=</span><span class="s1">&#39;pyamqp://guest@localhost//&#39;</span><span class="p">)</span>
-
-<span class="nd">@app</span><span class="o">.</span><span class="n">task</span>
-<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-</code></pre></div>
-
-<hr />
-<h2 id="schedule">Schedule</h2>
-<p><a href="https://schedule.readthedocs.io/en/stable/">Documentation</a></p>
-<p>Python job scheduling for humans. Run Python functions (or any other callable) periodically using a friendly syntax.</p>
-<ul>
-<li>A simple to use API for scheduling jobs, made for humans.</li>
-<li>In-process scheduler for periodic jobs. No extra processes needed!</li>
-<li>Very lightweight and no external dependencies.</li>
-<li>Excellent test coverage.</li>
-<li>Tested on Python 3.6, 3.7, 3.8 and 3.9</li>
-</ul>
-<p>Schedule is not a ‘one size fits all’ scheduling library. This library is designed to be a simple solution for simple scheduling problems. You should probably look somewhere else if you need:</p>
-<ul>
-<li>Job persistence (remember schedule between restarts)</li>
-<li>Exact timing (sub-second precision execution)</li>
-<li>Concurrent execution (multiple threads)</li>
-<li>Localization (time zones, workdays or holidays)</li>
-</ul>
-<p>Schedule does not account for the time it takes for the job function to execute. To guarantee a stable execution schedule you need to move long-running jobs off the main-thread (where the scheduler runs). See Parallel execution for a sample implementation.</p>
-<p>Simple Single threaded execution:
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">schedule</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="k">def</span> <span class="nf">job</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I&#39;m working...&quot;</span><span class="p">)</span>
-
-<span class="n">schedule</span><span class="o">.</span><span class="n">every</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">minutes</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
-<span class="n">schedule</span><span class="o">.</span><span class="n">every</span><span class="p">()</span><span class="o">.</span><span class="n">hour</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
-<span class="n">schedule</span><span class="o">.</span><span class="n">every</span><span class="p">()</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="s2">&quot;10:30&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
-<span class="n">schedule</span><span class="o">.</span><span class="n">every</span><span class="p">()</span><span class="o">.</span><span class="n">monday</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
-<span class="n">schedule</span><span class="o">.</span><span class="n">every</span><span class="p">()</span><span class="o">.</span><span class="n">wednesday</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="s2">&quot;13:15&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
-<span class="n">schedule</span><span class="o">.</span><span class="n">every</span><span class="p">()</span><span class="o">.</span><span class="n">minute</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="s2">&quot;:17&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
-
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">schedule</span><span class="o">.</span><span class="n">run_pending</span><span class="p">()</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div></p>
-<p>Multi threaded execution:</p>
-<p><a href="https://schedule.readthedocs.io/en/stable/parallel-execution.html">More Info</a></p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">threading</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">schedule</span>
-
-<span class="k">def</span> <span class="nf">job</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I&#39;m running on thread </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">())</span>
-
-<span class="k">def</span> <span class="nf">run_threaded</span><span class="p">(</span><span class="n">job_func</span><span class="p">):</span>
-    <span class="n">job_thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">job_func</span><span class="p">)</span>
-    <span class="n">job_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-
-<span class="n">schedule</span><span class="o">.</span><span class="n">every</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">seconds</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">run_threaded</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
-<span class="n">schedule</span><span class="o">.</span><span class="n">every</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">seconds</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">run_threaded</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
-<span class="n">schedule</span><span class="o">.</span><span class="n">every</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">seconds</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">run_threaded</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
-<span class="n">schedule</span><span class="o">.</span><span class="n">every</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">seconds</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">run_threaded</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
-<span class="n">schedule</span><span class="o">.</span><span class="n">every</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">seconds</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">run_threaded</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
-
-
-<span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="n">schedule</span><span class="o">.</span><span class="n">run_pending</span><span class="p">()</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># One liner to output a JSONL file, run multiple times to keep adding</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">file</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;path/to/data.jsonl&quot;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">))</span>
 </code></pre></div>
                 
               
@@ -1121,7 +991,7 @@ Which will serve up a web UI</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../data/fileformats/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Files" rel="prev">
+        <a href="../blogs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Blogs" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1130,26 +1000,11 @@ Which will serve up a web UI</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Files
+              Blogs
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../../viz/viz/" class="md-footer__link md-footer__link--next" aria-label="Next: Viz" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Viz
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
