@@ -51,7 +51,9 @@ nav:
         - schedule/scheduling.md
     - Viz: viz/viz.md
     - BI: bi/bi.md
-    - ML: ml/ml.md
+    - ML:
+      - ml/ml.md
+      - ml/cluster.md
     - NLP: nlp/nlp.md
     - Crypto:
         -  crypto/encryption.md
