@@ -72,6 +72,28 @@ list(map(list, zip(*zipped_list)))
 # [[1, 2, 3], [4, 5, 6]]
 ```
 
+#### Split List into List of Lists N sized
+```python
+A = [0, 1, 2, 3, 4, 5]
+
+split_list_n = lambda A, n: [A[i:i + n] for i in range(0, len(A), n)]
+
+split_list_n(A, 3)
+# [[0, 1, 2], [3, 4, 5]]
+```
+
+#### Reshape List into N Lists of Lists
+```python
+A = [0, 1, 2, 3, 4, 5]
+
+reshape = lambda A, n: [A[i:i + int(len(A)/n)] for i in range(0, len(A), int(len(A)/n))]
+
+reshape(A, 2)
+# [[0, 1, 2], [3, 4, 5]]
+reshape(A, 3)
+# [[0, 1], [2, 3], [4, 5]]
+```
+
 #### Create dictionary with key, values from two lists
 ```python
 dict(zip(['a','b','c'], [1,2,3]))
@@ -274,15 +296,110 @@ matrix_subtract(A, B)
 A = [[2,1],
      [6,5]]
 
-scalar_multiply = lambda a, b: [
-    list(map(lambda x: x[i] * b, zip(*a))) for i,v in enumerate(a)
-]
+B = [1,2,3,4,5]
+# Method 2 (Broken)
+# scalar_multiply = lambda a, b: [
+#     list(map(lambda x: x[i] * b, zip(*a))) for i,v in enumerate(a)
+# ]
+
+# Method 1
+scalar_multiply = lambda A, B: [[sum(ea * eb for ea, eb in zip(a, b)) for b in zip(*B)] for a in A] if isinstance(B, list) else [sum(ea * B for ea in a) for a in A]
+
+scalar_multiply = (
+    lambda A, B: [[sum(ea * eb for ea, eb in zip(a, b)) for b in zip(*B)] for a in A]
+    if isinstance(B, list)
+    else [sum(ea * B for ea in a) for a in A]
+)
+
 
 scalar_multiply(A, 2)
 # [[4, 2],
 #  [12, 10]]
+
+scalar_multiply(B, 2)
 ```
 
+#### Cosine Similarity
+```python
+A, B = [3, 2, 0, 5], [1, 0, 0, 0]
+
+dot = lambda A, B: sum(x * y for x, y in zip(A, B))
+cosine_similarity = (lambda A, B: sum(x * y for x, y in zip(A, B)) / (sum([i**2 for i in A])**(1/2) * sum([i**2 for i in B])**(1/2)))
+
+cosine_similarity(A, B)
+# 0.48666426339228763
+```
+
+#### Jaccard Similarity
+```python
+A, B = [1, 2, 3, 4], [3, 4, 5, 6]
+
+jaccard = lambda A, B: len(set(A).intersection(set(B))) / len(set(A).union(set(B)))
+
+jaccard(A,B)
+# 0.3333333333333333
+jaccard('dog', 'doggy')
+# 0.75
+```
+
+#### Hamming Distance
+```python
+A = [1,0,1,0,1,0,1,0]
+B = [0,1,0,1,1,0,1,0]
+
+hamming = lambda a, b: len(list(filter(lambda x: x[0] == x[1], zip(a,b))))
+
+hamming(A, B)
+# 4
+```
+
+#### Mean Squared Errors
+MSE formula = (1/n) * Σ(actual – forecast)^2
+```python
+A, B = [41, 45, 49, 47, 44], [43.6, 44.4, 45.2, 46, 46.8]
+
+mse = lambda A, B: sum(map(lambda x: (x[0] - x[1])**2, zip(A,B))) / len(A)
+
+mse(A,B)
+# 6.079999999999994
+```
+
+#### Variance
+```python
+A = [9, 2, 5, 4, 12, 7, 8, 11, 9, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4]
+variance = lambda A: sum(map(lambda x: (x-sum(A)/len(A))**2, A))/len(A)
+
+variance(A)
+# 8.9
+```
+
+#### Sample Variance
+```python
+A = [9, 2, 5, 4, 12, 7]
+
+variance_sample = lambda A: sum(map(lambda x: (x-sum(A)/len(A)) ** 2, A)) / ((len(A)-1)/1)
+
+variance_sample(A)
+# 13.1
+```
+
+#### Standard Deviation
+```python
+A = [9, 2, 5, 4, 12, 7, 8, 11, 9, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4]
+std = lambda A: (sum(map(lambda x: (x-sum(A)/len(A))**2, A))/len(A))**0.5
+
+std(A)
+# 2.9832867780352594
+```
+
+#### Sample Standard Deviation (Bessel's Correction)
+```python
+A = [9, 2, 5, 4, 12, 7, 8, 11, 9, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4]
+std_sample = lambda A: (sum(map(lambda x: (x-sum(A)/len(A)) ** 2, A)) / ((len(A)-1)/1)) ** 0.5
+
+std_sample(A)
+# 3.6193922141707713
+```
 
 ---
 
@@ -299,10 +416,10 @@ primt(5)
 ```
 
 #### Prime Number Check (Optimized)
-Optimization: checking if ending digit divisible by 2, reduced search space by half
+Optimization: checking if ending digit divisible by 2, reduced search space by limiting to square root of n
 ```python
 # Flat
-prime = lambda n: False if int(str(n)[-1]) % 2 == 0 else any([i for i in range(2, int(n/2)+1) if n % i == 0]) != True
+prime = lambda n: False if int(str(n)[-1]) % 2 == 0 else any([i for i in range(2, int(n**0.5)+1) if n % i == 0]) != True
 
 # Black Format
 prime = (
@@ -318,11 +435,11 @@ prime(4_589_407)
 ```
 
 
-#### Mersenne Prime Number Finder (Danger!)
+#### Mersenne Prime Number Finder
 [Info on 2,147,483,647](https://en.wikipedia.org/wiki/2,147,483,647)
 ```python
 # Flat
-prime = lambda n: False if int(str(n)[-1]) % 2 == 0 else any([i for i in range(2, int(n/2)+1) if n % i == 0]) != True
+prime = lambda n: False if int(str(n)[-1]) % 2 == 0 else any([i for i in range(2, int(n**0.5)+1) if n % i == 0]) != True
 mersenne = lambda n: list(filter(lambda i: i is not None, list(map(lambda x: 2**x -1 if prime(2**x -1) else None, range(1, n+1)))))
 
 # Black Format
@@ -341,7 +458,6 @@ mersenne = lambda n: list(
 
 mersenne(31)
 # [1, 3, 7, 31, 127, 8191, 131071, 524287, 2147483647]
-# This took ~1.5 minutes to run
 ```
 
 ---
@@ -443,6 +559,15 @@ proper_nouns = re.findall(r'\b(?:[A-Z][a-z]+)\b', text)
 verbs = re.findall(r'\b(?:[A-z]+ing|[A-z]+ed|[A-z]+en|[A-z]+s)\b', text)
 ```
 
+#### Palindrome
+```python
+word = "racecar"
+palindrome = lambda word: word.lower() == "".join(reversed(word.lower()))
+
+palindrome(word)
+# True
+```
+
 ---
 
 <a id="ciphers-encryption"></a>
@@ -530,6 +655,46 @@ print(factoral(10))
 # 3628800
 ```
 
+#### Mean
+```python
+A = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+
+mean = lambda A: sum(A)/len(A)
+
+mean(A)
+# 89.76923076923077
+```
+
+#### Median
+```python
+A = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+
+median = lambda A: sorted(A)[int(len(A)/2)]
+
+median(A)
+# 87
+```
+
+#### Mode
+```python
+A = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+
+mode = max(A, key=A.count)
+
+mode(A)
+# 86
+```
+
+#### Least Common item in List
+```python
+A = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+
+least_common_item = min(A, key=A.count)
+
+least_common_item(A)
+# 99
+```
+
 #### check if N is divisible by X AND Y
 ```python
 n_divisible = lambda n, x, y: all([divmod(n, x)[1] == 0, divmod(n, y)[1] == 0])
@@ -547,6 +712,31 @@ odd_below(15)
 # 7
 ```
 
+#### Get number of even numbers below N
+```python
+# Faster
+even_below = lambda n: len([x for x in range(n) if x % 2 == 0])
+# or a bit slower
+even_below = lambda n: len(list(filter(lambda x: x % 2 == 0, range(n))))
+even_below(15)
+# 7
+```
+
+#### Remove Outliers
+Filter list down by those within N standard deviations of the mean
+```python
+A = [10, 8, 10, 8, 2, 7, 9, 3, 34, 9, 5, 9, 25]
+# Mean is 10.692307692307692
+
+remove_outliers = lambda A, n: list(filter(lambda x: (sum(A)/len(A) - n * (sum(map(lambda x: (x-sum(A)/len(A))**2, A))/len(A))**0.5) <= x <= (sum(A)/len(A) + n * (sum(map(lambda x: (x-sum(A)/len(A))**2, A))/len(A))**0.5), A))
+
+remove_outliers(A, 2)
+# [10, 8, 10, 8, 2, 7, 9, 3, 9, 5, 9, 25]
+remove_outliers(A, 1)
+# [10, 8, 10, 8, 7, 9, 3, 9, 5, 9]
+remove_outliers(A, 0.25)
+# [10, 10, 9, 9, 9]
+```
 
 
 
