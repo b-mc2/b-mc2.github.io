@@ -9,14 +9,18 @@
         <meta name="description" content="Toolbox for all things Python">
       
       
-      
         <meta name="author" content="Brian McCrillis">
       
       
         <link rel="canonical" href="https://projects.brianmccrillis.com/blogs/snippets/">
       
+      
+        <link rel="prev" href="../blogs/">
+      
+      
+      
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
@@ -24,42 +28,40 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.db9e7362.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
-        
-      
-    
-    
-    
-      
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
-
+    
     
     
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr">
   
     
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -76,20 +78,22 @@
       
     </div>
     
+    
       
 
   
 
-<header class="md-header md-header--lifted" data-md-component="header">
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="PyToolbox" class="md-header__button md-logo" aria-label="PyToolbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -111,22 +115,25 @@
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -137,7 +144,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -146,11 +153,10 @@
     
     
       <div class="md-header__source">
-        
-<a href="https://github.com/b-mc2/b-mc2.github.io" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/b-mc2/b-mc2.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     b-mc2/PyToolbox
@@ -163,19 +169,24 @@
     
       
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
+  <div class="md-grid">
     <ul class="md-tabs__list">
       
         
   
   
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
 
-
-  <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
-      Home
-    </a>
-  </li>
+      </a>
+    </li>
+  
 
       
         
@@ -183,30 +194,42 @@
   
     
   
-
-
   
+    
+    
+      
   
   
     
-
-  
   
   
     
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../data/eda/" class="md-tabs__link">
+          
+  
+    
+  
+  ToolBox
 
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../data/eda/" class="md-tabs__link md-tabs__link--active">
-        ToolBox
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
+    
   
 
+    
   
 
       
@@ -232,6 +255,7 @@
                   <div class="md-sidebar__inner">
                     
 
+
   
 
 
@@ -240,18 +264,17 @@
     <a href="../.." title="PyToolbox" class="md-nav__button md-logo" aria-label="PyToolbox" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     PyToolbox
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/b-mc2/b-mc2.github.io" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/b-mc2/b-mc2.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     b-mc2/PyToolbox
@@ -263,14 +286,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        Home
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
       </a>
     </li>
   
@@ -278,603 +305,786 @@
     
       
       
-      
-
   
   
     
   
   
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
-      
-      
-      
         
-          
         
-          
         
-          
         
-          
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
-          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ToolBox
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_2">
-          ToolBox
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="ToolBox" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          ToolBox
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            ToolBox
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
-      
-      
-      
         
-          
         
-          
         
-          
         
-      
-      
-        <label class="md-nav__link" for="__nav_2_1">
-          Data
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Data" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_1">
-          <span class="md-nav__icon md-icon"></span>
-          Data
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" >
-      
-      
-      
         
-          
         
-          
         
-          
         
-          
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
         
-      
-      
-        <label class="md-nav__link" for="__nav_2_1_1">
-          Data Exploration
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Data Exploration" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_1_1">
-          <span class="md-nav__icon md-icon"></span>
-          Data Exploration
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
+          <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Exploration
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Data Exploration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../data/eda/" class="md-nav__link">
-        EDA
+        
+  
+  <span class="md-ellipsis">
+    EDA
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../data/binning/" class="md-nav__link">
-        Binning
+        
+  
+  <span class="md-ellipsis">
+    Binning
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../data/sorting/" class="md-nav__link">
-        Sorting
+        
+  
+  <span class="md-ellipsis">
+    Sorting
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../data/data_scale/" class="md-nav__link">
-        Data Scale
+        
+  
+  <span class="md-ellipsis">
+    Data Scale
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" >
-      
-      
-      
         
-          
         
-          
         
-          
         
-          
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
         
-      
-      
-        <label class="md-nav__link" for="__nav_2_1_2">
-          ETL
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="ETL" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_1_2">
-          <span class="md-nav__icon md-icon"></span>
-          ETL
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ETL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            ETL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../etl/extract/" class="md-nav__link">
-        Extract
+        
+  
+  <span class="md-ellipsis">
+    Extract
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../etl/transform/" class="md-nav__link">
-        Transform
+        
+  
+  <span class="md-ellipsis">
+    Transform
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../etl/load/" class="md-nav__link">
-        Load
+        
+  
+  <span class="md-ellipsis">
+    Load
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../etl/pipelines/" class="md-nav__link">
-        Pipelines
+        
+  
+  <span class="md-ellipsis">
+    Pipelines
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     
+    
+      
+        
+      
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_3" type="checkbox" id="__nav_2_1_3" >
-      
-      
-      
         
-          
         
-      
-      
-        <label class="md-nav__link" for="__nav_2_1_3">
-          Data Formats
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Data Formats" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_1_3">
-          <span class="md-nav__icon md-icon"></span>
-          Data Formats
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Formats
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Data Formats
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../data/fileformats/" class="md-nav__link">
-        Files
+        
+  
+  <span class="md-ellipsis">
+    Files
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     
+    
+      
+        
+      
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
-      
-      
-      
         
-          
         
-      
-      
-        <label class="md-nav__link" for="__nav_2_2">
-          Scheduling
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Scheduling" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
-          <span class="md-nav__icon md-icon"></span>
-          Scheduling
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Scheduling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Scheduling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../schedule/scheduling/" class="md-nav__link">
-        Scheduling Tasks
+        
+  
+  <span class="md-ellipsis">
+    Scheduling Tasks
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../viz/viz/" class="md-nav__link">
-        Viz
+        
+  
+  <span class="md-ellipsis">
+    Viz
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../bi/bi/" class="md-nav__link">
-        BI
+        
+  
+  <span class="md-ellipsis">
+    BI
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     
+    
+      
+        
+      
+        
+      
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
-      
-      
-      
         
-          
         
-          
         
-      
-      
-        <label class="md-nav__link" for="__nav_2_5">
-          ML
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="ML" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_5">
-          <span class="md-nav__icon md-icon"></span>
-          ML
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ML
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            ML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../ml/ml/" class="md-nav__link">
-        Machine Learning
+        
+  
+  <span class="md-ellipsis">
+    Machine Learning
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../ml/cluster/" class="md-nav__link">
-        Clustering
+        
+  
+  <span class="md-ellipsis">
+    Clustering
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../nlp/nlp/" class="md-nav__link">
-        NLP
+        
+  
+  <span class="md-ellipsis">
+    NLP
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
-      
-      
-      
         
-          
         
-          
         
-          
         
-      
-      
-        <label class="md-nav__link" for="__nav_2_7">
-          Crypto
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Crypto" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_7">
-          <span class="md-nav__icon md-icon"></span>
-          Crypto
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Crypto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            Crypto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../crypto/encryption/" class="md-nav__link">
-        Encryption
+        
+  
+  <span class="md-ellipsis">
+    Encryption
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../crypto/hashing/" class="md-nav__link">
-        Hashing
+        
+  
+  <span class="md-ellipsis">
+    Hashing
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../crypto/steganography/" class="md-nav__link">
-        Steganography
+        
+  
+  <span class="md-ellipsis">
+    Steganography
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../blogs/" class="md-nav__link">
-        Blogs
+        
+  
+  <span class="md-ellipsis">
+    Blogs
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
     
@@ -882,22 +1092,35 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Snippets
+          
+  
+  <span class="md-ellipsis">
+    Snippets
+  </span>
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Snippets
+        
+  
+  <span class="md-ellipsis">
+    Snippets
+  </span>
+  
+
       </a>
       
         
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -925,10 +1148,11 @@
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -945,6 +1169,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -973,12 +1198,14 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                
-                <h1 id="cool-snippets-of-python-code">Cool Snippets of Python Code</h1>
+                  
+
+
+<h1 id="cool-snippets-of-python-code">Cool Snippets of Python Code</h1>
 <p>Here's some snippets of Code that are cool to reuse.</p>
 <h2 id="python">Python</h2>
 <p>I'm convinced that <code>map</code>, <code>filter</code>, <code>lambda</code>, <code>zip</code>, <code>functools</code> and <code>itertools</code> are some of the most 
@@ -1002,7 +1229,7 @@ form, they are fast and easy to make into lambda functions.</p>
 <hr />
 <p><a id="handling-inputs"></a></p>
 <h3 id="handling-inputs">Handling Inputs</h3>
-<h4 id="input-multiple-lines-often-used-in-competitions">Input multiple lines (often used in competitions)</h4>
+<h3 id="input-multiple-lines-often-used-in-competitions">Input multiple lines (often used in competitions)</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Takes in space separated integers as strings, maps to ints</span>
 <span class="n">K</span><span class="p">,</span> <span class="n">M</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
 <span class="c1"># 5 100</span>
@@ -1011,45 +1238,43 @@ form, they are fast and easy to make into lambda functions.</p>
 <span class="n">input_map</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())))</span>
 <span class="c1"># {0: 5, 1: 100}</span>
 </code></pre></div>
-
 <hr />
 <p><a id="combining-splitting"></a></p>
 <h3 id="combiningsplitting-data">Combining/Splitting Data</h3>
-<h4 id="create-a-list-of-combined-strings-from-multiple-iterables">Create a list of combined strings from multiple iterables</h4>
+<h3 id="create-a-list-of-combined-strings-from-multiple-iterables">Create a list of combined strings from multiple iterables</h3>
 <div class="highlight"><pre><span></span><code><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;cherry&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;lemon&#39;</span><span class="p">,</span> <span class="s1">&#39;pineapple&#39;</span><span class="p">)))</span>
 <span class="c1"># [&#39;apple-orange&#39;, &#39;banana-lemon&#39;, &#39;cherry-pineapple&#39;]</span>
 </code></pre></div>
-
-<h4 id="join-two-lists-together-into-list-of-tuples">Join two lists together into list of tuples</h4>
+<h3 id="join-two-lists-together-into-list-of-tuples">Join two lists together into list of tuples</h3>
 <div class="highlight"><pre><span></span><code><span class="n">zipped_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]))</span>
 <span class="c1"># [(1, 4), (2, 5), (3, 6)]</span>
 </code></pre></div>
-
-<h4 id="join-two-lists-together-into-list-of-lists">Join two lists together into list of lists</h4>
+<h3 id="join-two-lists-together-into-list-of-lists">Join two lists together into list of lists</h3>
 <div class="highlight"><pre><span></span><code><span class="n">zipped_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">zip</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])))</span>
 <span class="c1"># [[1, 4], [2, 5], [3, 6]]</span>
 </code></pre></div>
-
-<h4 id="unzip-a-list-of-tuples">Unzip a list of tuples</h4>
+<h3 id="unzip-a-list-of-tuples">Unzip a list of tuples</h3>
 <div class="highlight"><pre><span></span><code><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">zipped_list</span><span class="p">))</span>
 <span class="c1"># [(1, 2, 3), (4, 5, 6)]</span>
 </code></pre></div>
-
-<h4 id="unzip-list-of-lists">Unzip list of lists</h4>
+<h3 id="unzip-list-of-lists">Unzip list of lists</h3>
 <div class="highlight"><pre><span></span><code><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">zipped_list</span><span class="p">)))</span>
 <span class="c1"># [[1, 2, 3], [4, 5, 6]]</span>
 </code></pre></div>
+<h3 id="split-list-into-list-of-n-sized-lists">Split List into List of N sized Lists</h3>
+<div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 
-<h4 id="split-list-into-list-of-lists-n-sized">Split List into List of Lists N sized</h4>
-<div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-
+<span class="c1"># split as is</span>
 <span class="n">split_list_n</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="p">[</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="n">n</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="n">n</span><span class="p">)]</span>
+<span class="c1"># [[5, 4, 3], [2, 1, 0]]</span>
+
+<span class="c1"># sort the results before split</span>
+<span class="n">split_list_n_sorted</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="p">[</span><span class="nb">sorted</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">n</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="n">n</span><span class="p">)]</span>
 
 <span class="n">split_list_n</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="c1"># [[0, 1, 2], [3, 4, 5]]</span>
+<span class="c1"># [[3, 4, 5], [0, 1, 2]]</span>
 </code></pre></div>
-
-<h4 id="reshape-list-into-n-lists-of-lists">Reshape List into N Lists of Lists</h4>
+<h3 id="reshape-list-into-n-lists-of-lists">Reshape List into N Lists of Lists</h3>
 <div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 
 <span class="n">reshape</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="p">[</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">/</span><span class="n">n</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">/</span><span class="n">n</span><span class="p">))]</span>
@@ -1059,13 +1284,11 @@ form, they are fast and easy to make into lambda functions.</p>
 <span class="n">reshape</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="c1"># [[0, 1], [2, 3], [4, 5]]</span>
 </code></pre></div>
-
-<h4 id="create-dictionary-with-key-values-from-two-lists">Create dictionary with key, values from two lists</h4>
+<h3 id="create-dictionary-with-key-values-from-two-lists">Create dictionary with key, values from two lists</h3>
 <div class="highlight"><pre><span></span><code><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span>
 <span class="c1"># {&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3}</span>
 </code></pre></div>
-
-<h4 id="create-dictionary-with-index-number-keys">Create dictionary with Index number keys</h4>
+<h3 id="create-dictionary-with-index-number-keys">Create dictionary with Index number keys</h3>
 <div class="highlight"><pre><span></span><code><span class="n">some_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;Liz&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">]</span>
 <span class="c1"># One-Line Statement Creating a Dict:</span>
 <span class="nb">dict</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">some_list</span><span class="p">))</span>
@@ -1076,11 +1299,24 @@ form, they are fast and easy to make into lambda functions.</p>
 <span class="n">indexed_dict</span><span class="p">(</span><span class="n">some_list</span><span class="p">)</span>
 <span class="c1"># {0: &#39;Alice&#39;, 1: &#39;Liz&#39;, 2: &#39;Bob&#39;}</span>
 </code></pre></div>
+<h3 id="extended-iterable-unpacking">Extended Iterable Unpacking</h3>
+<p><a href="https://erikvandeven.medium.com/python-uncovering-the-overlooked-core-functionalities-54590420c225">Source</a>
+<div class="highlight"><pre><span></span><code><span class="n">first</span><span class="p">,</span> <span class="o">*</span><span class="n">middle</span><span class="p">,</span> <span class="n">last</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 
+<span class="nb">print</span><span class="p">(</span><span class="n">first</span><span class="p">)</span>  <span class="c1"># 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">middle</span><span class="p">)</span> <span class="c1"># [2, 3, 4]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">last</span><span class="p">)</span>   <span class="c1"># 5</span>
+
+<span class="o">*</span><span class="n">the_first_three</span><span class="p">,</span> <span class="n">second_last</span><span class="p">,</span> <span class="n">last</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">the_first_three</span><span class="p">)</span> <span class="c1"># [1, 2, 3]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">second_last</span><span class="p">)</span>     <span class="c1"># 4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">last</span><span class="p">)</span>            <span class="c1"># 5</span>
+</code></pre></div></p>
 <hr />
 <p><a id="filtering-data"></a></p>
 <h3 id="filtering-data">Filtering Data</h3>
-<h4 id="filter-a-list-by-min-value">Filter a list by min value</h4>
+<h3 id="filter-a-list-by-min-value">Filter a list by min value</h3>
 <div class="highlight"><pre><span></span><code><span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">32</span><span class="p">]</span>
 
 <span class="p">[</span><span class="n">age</span> <span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="n">ages</span> <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">]</span>
@@ -1088,11 +1324,10 @@ form, they are fast and easy to make into lambda functions.</p>
 <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">age</span><span class="p">:</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">,</span> <span class="n">ages</span><span class="p">))</span>
 <span class="c1"># [18, 24, 32]</span>
 </code></pre></div>
-
 <hr />
 <p><a id="sorting-data"></a></p>
 <h3 id="sorting-data">Sorting Data</h3>
-<h4 id="sort-list-of-dictionaries-by-specific-value">Sort list of dictionaries by specific value</h4>
+<h3 id="sort-list-of-dictionaries-by-specific-value">Sort list of dictionaries by specific value</h3>
 <div class="highlight"><pre><span></span><code><span class="n">cars</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="s1">&#39;Ford&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="mi">2005</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="s1">&#39;Mitsubishi&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="mi">2000</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="s1">&#39;BMW&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="mi">2019</span><span class="p">}]</span>
 
 <span class="n">cars</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">])</span>
@@ -1116,66 +1351,63 @@ form, they are fast and easy to make into lambda functions.</p>
 <span class="c1">#     }</span>
 <span class="c1"># ]</span>
 </code></pre></div>
-
-<h4 id="sorting-dictionary-values">Sorting dictionary values</h4>
+<h3 id="sorting-dictionary-values">Sorting dictionary values</h3>
 <div class="highlight"><pre><span></span><code><span class="n">some_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
 <span class="n">sort_dict</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">some_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">some_dict</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 
 <span class="n">sort_dict</span><span class="p">(</span><span class="n">some_dict</span><span class="p">)</span>
 <span class="c1"># {&#39;b&#39;: 8, &#39;a&#39;: 5, &#39;c&#39;: 1}</span>
 </code></pre></div>
-
 <hr />
 <p><a id="outputting-data"></a></p>
 <h3 id="outputting-data">Outputting Data</h3>
-<h4 id="one-liner-to-output-a-pretty-json-file">One liner to output a pretty JSON file</h4>
+<h3 id="one-liner-to-output-a-pretty-json-file">One liner to output a pretty JSON file</h3>
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span> <span class="n">file</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;path/to/data.json&quot;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">))</span>
 </code></pre></div>
-
-<h4 id="one-liner-to-output-a-jsonl-file-run-multiple-times-to-keep-adding">One liner to output a JSONL file, run multiple times to keep adding</h4>
+<h3 id="one-liner-to-output-a-jsonl-file-run-multiple-times-to-keep-adding">One liner to output a JSONL file, run multiple times to keep adding</h3>
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">file</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;path/to/data.jsonl&quot;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">))</span>
 </code></pre></div>
-
+<h3 id="cli-command-to-pretty-print-json-in-the-terminal">CLI command to pretty print JSON in the terminal</h3>
+<div class="highlight"><pre><span></span><code>python -m json.tool data.json
+</code></pre></div>
 <hr />
 <p><a id="matrix-operations"></a></p>
 <h3 id="matrix-operations">Matrix Operations</h3>
-<h4 id="create-a-list-of-sums-of-two-lists-or-iterables">Create a list of sums of two lists or iterables</h4>
+<h3 id="create-a-list-of-sums-of-two-lists-or-iterables">Create a list of sums of two lists or iterables</h3>
 <div class="highlight"><pre><span></span><code><span class="n">list_one</span><span class="p">,</span> <span class="n">list_two</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
 <span class="n">cross_sum</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">list_one</span><span class="p">,</span> <span class="n">list_two</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">sum</span><span class="p">,</span> <span class="nb">zip</span><span class="p">(</span><span class="n">list_one</span><span class="p">,</span> <span class="n">list_two</span><span class="p">)))</span>
 
 <span class="n">cross_sum</span><span class="p">(</span><span class="n">list_one</span><span class="p">,</span> <span class="n">list_two</span><span class="p">)</span>
 <span class="c1"># [5, 7, 9]</span>
 </code></pre></div>
-
-<h4 id="get-max-value-for-each-index-number-across-multiple-lists">Get max value for each index number across multiple lists</h4>
+<h3 id="get-max-value-for-each-index-number-across-multiple-lists">Get max value for each index number across multiple lists</h3>
 <div class="highlight"><pre><span></span><code><span class="n">list_one</span><span class="p">,</span> <span class="n">list_two</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">32</span><span class="p">],</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">16</span><span class="p">]</span>
 <span class="n">max_index_values</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">list_one</span><span class="p">,</span> <span class="n">list_two</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">max</span><span class="p">,</span> <span class="nb">zip</span><span class="p">(</span><span class="n">list_one</span><span class="p">,</span> <span class="n">list_two</span><span class="p">)))</span>
 
 <span class="n">max_index_values</span><span class="p">(</span><span class="n">list_one</span><span class="p">,</span> <span class="n">list_two</span><span class="p">)</span>
 <span class="c1"># [14, 12, 32]</span>
 </code></pre></div>
-
-<h4 id="get-pair-with-smallestlargest-difference-between-two-iterables">Get pair with smallest/largest difference between two iterables</h4>
+<h3 id="get-pair-with-smallestlargest-difference-between-two-iterables">Get pair with smallest/largest difference between two iterables</h3>
 <p><a href="https://www.geeksforgeeks.org/python-record-point-with-minimum-difference/">g4g</a>
 <div class="highlight"><pre><span></span><code><span class="c1"># smallest</span>
 <span class="n">smallest_pair</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">some_list</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">sub</span><span class="p">:</span> <span class="nb">abs</span><span class="p">(</span><span class="n">sub</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">sub</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 <span class="c1"># largest</span>
 <span class="n">largest_pair</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">some_list</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">sub</span><span class="p">:</span> <span class="nb">abs</span><span class="p">(</span><span class="n">sub</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">sub</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 </code></pre></div></p>
-<h4 id="dot-product-of-two-lists">Dot product of two lists</h4>
+<h3 id="dot-product-of-two-lists">Dot product of two lists</h3>
 <p><img alt="" src="https://media5.datahacker.rs/2020/04/Picture27-768x290.jpg" />
-<div class="highlight"><pre><span></span><code><span class="n">list_one</span><span class="p">,</span> <span class="n">list_two</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">A</span><span class="p">,</span> <span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
 
 <span class="c1"># Method 1</span>
-<span class="n">dot</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">list_one</span><span class="p">,</span> <span class="n">list_two</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">list_one</span><span class="p">,</span> <span class="n">list_two</span><span class="p">))</span>
+<span class="n">dot</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">))</span>
 
 <span class="c1"># Method 2</span>
-<span class="n">dot</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">list_one</span><span class="p">,</span> <span class="n">list_two</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">zip</span><span class="p">(</span><span class="n">list_one</span><span class="p">,</span> <span class="n">list_two</span><span class="p">)))</span>
+<span class="n">dot</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">zip</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)))</span>
 
-<span class="n">dot</span><span class="p">(</span><span class="n">list_one</span><span class="p">,</span> <span class="n">list_two</span><span class="p">)</span>
+<span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
 <span class="c1"># 38</span>
 </code></pre></div></p>
-<h4 id="matrix-product">Matrix Product</h4>
+<h3 id="matrix-product">Matrix Product</h3>
 <p><img alt="" src="https://assets.coursehero.com/study-guides/lumen/images/precalcone/finding-the-product-of-two-matrices/CNX_Precalc_Figure_09_05_00322.jpg" />
 <div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> 
      <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
@@ -1189,7 +1421,7 @@ form, they are fast and easy to make into lambda functions.</p>
 <span class="c1"># [[19, 22],</span>
 <span class="c1">#  [43, 50]]</span>
 </code></pre></div></p>
-<h4 id="matrix-addition">Matrix Addition</h4>
+<h3 id="matrix-addition">Matrix Addition</h3>
 <p><img alt="" src="https://www.mathportal.org/linear-algebra/matrices/matrix-operations_files/2.gif" />
 <div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> 
      <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
@@ -1209,7 +1441,7 @@ form, they are fast and easy to make into lambda functions.</p>
 <span class="c1"># [[6,  8],</span>
 <span class="c1">#  [10, 12]]</span>
 </code></pre></div></p>
-<h4 id="matrix-subtraction">Matrix Subtraction</h4>
+<h3 id="matrix-subtraction">Matrix Subtraction</h3>
 <p><img alt="" src="https://codeforwin.org/wp-content/uploads/2015/07/matrix-subtraction.png" />
 <div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
      <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span>
@@ -1232,7 +1464,7 @@ form, they are fast and easy to make into lambda functions.</p>
 <span class="c1">#  [-2,  0,  2], </span>
 <span class="c1">#  [ 4,  6,  8]]</span>
 </code></pre></div></p>
-<h4 id="scalar-multiplication">Scalar Multiplication</h4>
+<h3 id="scalar-multiplication">Scalar Multiplication</h3>
 <p><img alt="" src="https://dmn92m25mtw4z.cloudfront.net/latex_images/latex-image-7215334c0f2795f122da038cfdae146c-3x.jpg" />
 <div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
      <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span>
@@ -1259,7 +1491,7 @@ form, they are fast and easy to make into lambda functions.</p>
 
 <span class="n">scalar_multiply</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </code></pre></div></p>
-<h4 id="cosine-similarity">Cosine Similarity</h4>
+<h3 id="cosine-similarity">Cosine Similarity</h3>
 <div class="highlight"><pre><span></span><code><span class="n">A</span><span class="p">,</span> <span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 
 <span class="n">dot</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">))</span>
@@ -1268,9 +1500,9 @@ form, they are fast and easy to make into lambda functions.</p>
 <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
 <span class="c1"># 0.48666426339228763</span>
 </code></pre></div>
-
-<h4 id="jaccard-similarity">Jaccard Similarity</h4>
-<div class="highlight"><pre><span></span><code><span class="n">A</span><span class="p">,</span> <span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<h3 id="jaccard-similarity">Jaccard Similarity</h3>
+<div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 
 <span class="n">jaccard</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">B</span><span class="p">)))</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">B</span><span class="p">)))</span>
 
@@ -1279,8 +1511,21 @@ form, they are fast and easy to make into lambda functions.</p>
 <span class="n">jaccard</span><span class="p">(</span><span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;doggy&#39;</span><span class="p">)</span>
 <span class="c1"># 0.75</span>
 </code></pre></div>
+<h3 id="jaccard-similarity-n-chunks-testing-doesnt-work-well-so-far">Jaccard Similarity (N Chunks) Testing, doesn't work well so far</h3>
+<div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 
-<h4 id="hamming-distance">Hamming Distance</h4>
+<span class="n">jaccard_chunk</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span>
+    <span class="nb">set</span><span class="p">([</span><span class="n">A</span><span class="p">[</span><span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">size</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="n">size</span><span class="p">)])</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span>
+        <span class="nb">set</span><span class="p">([</span><span class="n">B</span><span class="p">[</span><span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">size</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">),</span> <span class="n">size</span><span class="p">)])</span>
+    <span class="p">)</span>
+<span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span>
+    <span class="nb">set</span><span class="p">([</span><span class="n">A</span><span class="p">[</span><span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">size</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="n">size</span><span class="p">)])</span><span class="o">.</span><span class="n">union</span><span class="p">(</span>
+        <span class="nb">set</span><span class="p">([</span><span class="n">B</span><span class="p">[</span><span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">size</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">),</span> <span class="n">size</span><span class="p">)])</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+<h3 id="hamming-distance">Hamming Distance</h3>
 <div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
 
@@ -1289,25 +1534,32 @@ form, they are fast and easy to make into lambda functions.</p>
 <span class="n">hamming</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
 <span class="c1"># 4</span>
 </code></pre></div>
+<h3 id="chebyshev-distance">Chebyshev Distance</h3>
+<div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">17</span><span class="p">]</span>
 
-<h4 id="mean-squared-errors">Mean Squared Errors</h4>
+<span class="n">chebyshev</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">:</span> <span class="nb">max</span><span class="p">([</span><span class="nb">abs</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)])</span>
+<span class="n">chebyshev</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+<span class="c1"># 8</span>
+</code></pre></div>
+<h3 id="mean-squared-errors">Mean Squared Errors</h3>
 <p>MSE formula = (1/n) * Σ(actual – forecast)^2
 <div class="highlight"><pre><span></span><code><span class="n">A</span><span class="p">,</span> <span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">41</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">44</span><span class="p">],</span> <span class="p">[</span><span class="mf">43.6</span><span class="p">,</span> <span class="mf">44.4</span><span class="p">,</span> <span class="mf">45.2</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mf">46.8</span><span class="p">]</span>
 
 <span class="n">mse</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="nb">zip</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">)))</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 
+<span class="n">mse</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">:</span> <span class="nb">sum</span><span class="p">((</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">))</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="n">mse</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">)</span>
 <span class="c1"># 6.079999999999994</span>
 </code></pre></div></p>
-<h4 id="variance">Variance</h4>
+<h3 id="variance">Variance</h3>
 <div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="n">variance</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="nb">sum</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">A</span><span class="p">))</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 
 <span class="n">variance</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="c1"># 8.9</span>
 </code></pre></div>
-
-<h4 id="sample-variance">Sample Variance</h4>
+<h3 id="sample-variance">Sample Variance</h3>
 <div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
 
 <span class="n">variance_sample</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="nb">sum</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">))</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">A</span><span class="p">))</span> <span class="o">/</span> <span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">1</span><span class="p">)</span>
@@ -1315,27 +1567,29 @@ form, they are fast and easy to make into lambda functions.</p>
 <span class="n">variance_sample</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="c1"># 13.1</span>
 </code></pre></div>
-
-<h4 id="standard-deviation">Standard Deviation</h4>
+<h3 id="standard-deviation">Standard Deviation</h3>
 <div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="n">std</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">:</span> <span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="nb">sum</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">A</span><span class="p">))</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">))</span><span class="o">**</span><span class="mf">0.5</span>
 
 <span class="n">std</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="c1"># 2.9832867780352594</span>
 </code></pre></div>
-
-<h4 id="sample-standard-deviation-bessels-correction">Sample Standard Deviation (Bessel's Correction)</h4>
+<h3 id="sample-standard-deviation-bessels-correction">Sample Standard Deviation (Bessel's Correction)</h3>
 <div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="n">std_sample</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">:</span> <span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="nb">sum</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">))</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">A</span><span class="p">))</span> <span class="o">/</span> <span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">1</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span>
 
 <span class="n">std_sample</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="c1"># 3.6193922141707713</span>
 </code></pre></div>
+<h3 id="sum-of-squared-deviations-sdam">Sum of Squared Deviations (SDAM)</h3>
+<div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 
+<span class="n">sdam</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">:</span> <span class="nb">sum</span><span class="p">([(</span><span class="n">a</span> <span class="o">-</span> <span class="nb">sum</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">A</span><span class="p">])</span>
+</code></pre></div>
 <hr />
 <p><a id="primes"></a></p>
 <h3 id="prime-numbers">Prime Numbers</h3>
-<h4 id="prime-number-check-naive">Prime Number Check (Naive)</h4>
+<h3 id="prime-number-check-naive">Prime Number Check (Naive)</h3>
 <div class="highlight"><pre><span></span><code><span class="n">prime</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="nb">any</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">])</span> <span class="o">!=</span> <span class="kc">True</span>
 
 <span class="n">prime</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span>
@@ -1343,16 +1597,11 @@ form, they are fast and easy to make into lambda functions.</p>
 <span class="n">primt</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="c1"># True</span>
 </code></pre></div>
-
-<h4 id="prime-number-check-optimized">Prime Number Check (Optimized)</h4>
+<h3 id="prime-number-check-optimized">Prime Number Check (Optimized)</h3>
 <p>Optimization: checking if ending digit divisible by 2, reduced search space by limiting to square root of n
-<div class="highlight"><pre><span></span><code><span class="c1"># Flat</span>
-<span class="n">prime</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="kc">False</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="nb">any</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">])</span> <span class="o">!=</span> <span class="kc">True</span>
-
-<span class="c1"># Black Format</span>
-<span class="n">prime</span> <span class="o">=</span> <span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="n">prime</span> <span class="o">=</span> <span class="p">(</span>
     <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="kc">False</span>
-    <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">%</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">0</span>
     <span class="k">else</span> <span class="nb">any</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">])</span> <span class="o">!=</span> <span class="kc">True</span>
 <span class="p">)</span>
 
@@ -1361,7 +1610,7 @@ form, they are fast and easy to make into lambda functions.</p>
 <span class="n">prime</span><span class="p">(</span><span class="mi">4_589_407</span><span class="p">)</span>
 <span class="c1"># True</span>
 </code></pre></div></p>
-<h4 id="mersenne-prime-number-finder">Mersenne Prime Number Finder</h4>
+<h3 id="mersenne-prime-number-finder">Mersenne Prime Number Finder</h3>
 <p><a href="https://en.wikipedia.org/wiki/2,147,483,647">Info on 2,147,483,647</a>
 <div class="highlight"><pre><span></span><code><span class="c1"># Flat</span>
 <span class="n">prime</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="kc">False</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="nb">any</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">])</span> <span class="o">!=</span> <span class="kc">True</span>
@@ -1385,9 +1634,24 @@ form, they are fast and easy to make into lambda functions.</p>
 <span class="c1"># [1, 3, 7, 31, 127, 8191, 131071, 524287, 2147483647]</span>
 </code></pre></div></p>
 <hr />
+<h3 id="sophie-germain-prime-wip">Sophie Germain Prime (WIP)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Black Format</span>
+<span class="n">prime</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">%</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">else</span> <span class="nb">any</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">])</span> <span class="o">!=</span> <span class="kc">True</span>
+<span class="p">)</span>
+
+<span class="n">germain</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span>
+    <span class="nb">filter</span><span class="p">(</span>
+        <span class="k">lambda</span> <span class="n">i</span><span class="p">:</span> <span class="n">i</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="k">if</span> <span class="nb">all</span><span class="p">([</span><span class="n">prime</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">prime</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)])</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
 <p><a id="regex-text-handling"></a></p>
 <h3 id="regex-and-text-handling">Regex and Text Handling</h3>
-<h4 id="regex-for-zipcodes">Regex for Zipcodes</h4>
+<h3 id="regex-for-zipcodes">Regex for Zipcodes</h3>
 <p><a href="https://stackoverflow.com/questions/2577236/regex-for-zip-code">Stackoverflow</a>
 <div class="highlight"><pre><span></span><code><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^\d</span><span class="si">{5}</span><span class="s2">(?:[-\s]\d</span><span class="si">{4}</span><span class="s2">)?$&quot;</span><span class="p">,</span> <span class="n">some_str</span><span class="p">)</span>
 <span class="c1"># ^ = Start of the string.</span>
@@ -1398,11 +1662,31 @@ form, they are fast and easy to make into lambda functions.</p>
 <span class="c1"># …? = The pattern before it is optional (for condition 1)</span>
 <span class="c1"># $ = End of the string.</span>
 </code></pre></div></p>
-<h4 id="regex-for-phone-numbers">Regex for Phone Numbers</h4>
+<h3 id="regex-for-phone-numbers">Regex for Phone Numbers</h3>
 <p><a href="https://stackoverflow.com/questions/37393480/python-regex-to-extract-phone-numbers-from-string">Stackoverflow</a>
 <div class="highlight"><pre><span></span><code><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[\+\(]?[1-9][0-9 .\-\(\)]{8,}[0-9]&#39;</span><span class="p">,</span> <span class="n">some_str</span><span class="p">)</span>
 </code></pre></div></p>
-<h4 id="quick-ratio-rough-without-dependencies">Quick Ratio (rough) without dependencies</h4>
+<h3 id="regex-for-emails">Regex for emails</h3>
+<div class="highlight"><pre><span></span><code><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-.]+\.[a-zA-Z0-9-]+)&#39;</span><span class="p">,</span> <span class="n">some_str</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="regex-for-urls">Regex for urls</h3>
+<div class="highlight"><pre><span></span><code><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(http|ftp|https):\/\/([\w\-_]+(?:(?:\.[\w\-_]+)+))([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?&#39;</span><span class="p">,</span> <span class="n">some_str</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="regex-for-numbers">Regex for numbers</h3>
+<div class="highlight"><pre><span></span><code><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[1-9](?:\d{0,2})(?:,\d</span><span class="si">{3}</span><span class="s1">)*(?:\.\d*[1-9])?|0?\.\d*[1-9]|0&#39;</span><span class="p">,</span> <span class="n">some_str</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="regex-scanner">Regex Scanner</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">scanner</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">Scanner</span><span class="p">([</span>
+  <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[0-9]+&quot;</span><span class="p">,</span>    <span class="k">lambda</span> <span class="n">scanner</span><span class="p">,</span><span class="n">token</span><span class="p">:(</span><span class="s2">&quot;INTEGER&quot;</span><span class="p">,</span> <span class="n">token</span><span class="p">)),</span>
+  <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[a-z_]+&quot;</span><span class="p">,</span>   <span class="k">lambda</span> <span class="n">scanner</span><span class="p">,</span><span class="n">token</span><span class="p">:(</span><span class="s2">&quot;IDENTIFIER&quot;</span><span class="p">,</span> <span class="n">token</span><span class="p">)),</span>
+  <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[,.]+&quot;</span><span class="p">,</span>     <span class="k">lambda</span> <span class="n">scanner</span><span class="p">,</span><span class="n">token</span><span class="p">:(</span><span class="s2">&quot;PUNCTUATION&quot;</span><span class="p">,</span> <span class="n">token</span><span class="p">)),</span>
+  <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\s+&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="c1"># None == skip token.</span>
+<span class="p">])</span>
+
+<span class="n">results</span><span class="p">,</span> <span class="n">remainder</span><span class="o">=</span><span class="n">scanner</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="s2">&quot;45 pigeons, 23 cows, 11 spiders.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="quick-ratio-rough-without-dependencies">Quick Ratio (rough) without dependencies</h3>
 <div class="highlight"><pre><span></span><code><span class="n">quick</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))))</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
 
 <span class="n">quick</span><span class="p">(</span><span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">)</span>
@@ -1414,23 +1698,23 @@ form, they are fast and easy to make into lambda functions.</p>
 <span class="n">quick</span><span class="p">(</span><span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;dogmatic&#39;</span><span class="p">)</span>
 <span class="c1"># 0.5454545454545454</span>
 </code></pre></div>
-
-<h4 id="frequency-map-of-character-counts-in-a-string">Frequency map of character counts in a string</h4>
+<h3 id="gestalt-pattern-matching">Gestalt Pattern Matching</h3>
+<div class="highlight"><pre><span></span><code><span class="n">gestalt</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">word</span><span class="p">,</span> <span class="n">compared</span><span class="p">:</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">([</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">compared</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]]))</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">compared</span><span class="p">)))</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">compared</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="p">[{</span><span class="n">target</span><span class="p">:</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">([</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]]))</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">target</span><span class="p">)))}</span> <span class="k">for</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">compared</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="frequency-map-of-character-counts-in-a-string">Frequency map of character counts in a string</h3>
 <div class="highlight"><pre><span></span><code><span class="n">freq_map</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">some_str</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">some_str</span><span class="p">,</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">some_str</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">some_str</span><span class="p">)))</span>
 
 <span class="n">freq_map</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">)</span>
 <span class="c1"># {&#39;H&#39;: 1, &#39;e&#39;: 1, &#39;l&#39;: 3, &#39;o&#39;: 2, &#39; &#39;: 1, &#39;W&#39;: 1, &#39;r&#39;: 1, &#39;d&#39;: 1}</span>
 </code></pre></div>
-
-<h4 id="strip-non-alphabet-characters-from-strings">Strip non alphabet characters from strings</h4>
+<h3 id="strip-non-alphabet-characters-from-strings">Strip non alphabet characters from strings</h3>
 <div class="highlight"><pre><span></span><code><span class="n">remove_chars</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">some_str</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">some_str</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot; &quot;</span><span class="p">])</span>
 <span class="c1"># or</span>
 <span class="n">remove_chars</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">some_str</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">some_str</span><span class="p">)))</span>
 <span class="n">remove_chars</span><span class="p">(</span><span class="s2">&quot;)#$Hello3 World@$)&quot;</span><span class="p">)</span>
 <span class="c1"># Hello World</span>
 </code></pre></div>
-
-<h4 id="frequency-map-of-word-counts-in-a-string-rough">Frequency map of word counts in a string (rough)</h4>
+<h3 id="frequency-map-of-word-counts-in-a-string-rough">Frequency map of word counts in a string (rough)</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Flat</span>
 <span class="n">word_count</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">some_text</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">some_text</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot; &quot;</span><span class="p">])</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">some_text</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">some_text</span><span class="o">.</span><span class="n">split</span><span class="p">())))</span>
 
@@ -1445,50 +1729,66 @@ form, they are fast and easy to make into lambda functions.</p>
 <span class="n">word_count</span><span class="p">(</span><span class="s2">&quot;the quick brown fox jumps over the lazy dog&quot;</span><span class="p">)</span>
 <span class="c1"># {&#39;the&#39;: 2, &#39;quick&#39;: 1, &#39;brown&#39;: 1, &#39;fox&#39;: 1, &#39;jumps&#39;: 1, &#39;over&#39;: 1, &#39;lazy&#39;: 1, &#39;dog&#39;: 1}</span>
 </code></pre></div>
-
-<h4 id="spongebob-case-text">Spongebob Case text</h4>
+<h3 id="spongebob-case-text">Spongebob Case text</h3>
 <p>convert text into SpOnGeBoB cAsE
 <div class="highlight"><pre><span></span><code><span class="c1"># Flat</span>
-<span class="n">spongebob_case</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">word</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">i</span><span class="p">:</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">word</span><span class="p">))))</span>
+<span class="n">spongebob_case</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">word</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">i</span><span class="p">:</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">word</span><span class="p">)))</span>
+
+<span class="n">spongebob_case</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">word</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&amp;</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
 
 <span class="c1"># Black Format</span>
 <span class="n">spongebob_case</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">word</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
-    <span class="nb">list</span><span class="p">(</span>
         <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">i</span><span class="p">:</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
-    <span class="p">)</span>
 <span class="p">)</span>
 
 <span class="n">spongebob_case</span><span class="p">(</span><span class="s1">&#39;hello world&#39;</span><span class="p">)</span>
 <span class="c1"># hElLo wOrLd</span>
 </code></pre></div></p>
-<h4 id="proper-nouns-naive">Proper Nouns (naive)</h4>
+<h3 id="proper-nouns-naive">Proper Nouns (naive)</h3>
 <div class="highlight"><pre><span></span><code><span class="n">proper_nouns</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b(?:[A-Z][a-z]+)\b&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
 </code></pre></div>
-
-<h4 id="verbs-naive">Verbs (naive)</h4>
+<h3 id="verbs-naive">Verbs (naive)</h3>
 <div class="highlight"><pre><span></span><code><span class="n">verbs</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b(?:[A-z]+ing|[A-z]+ed|[A-z]+en|[A-z]+s)\b&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
 </code></pre></div>
-
-<h4 id="palindrome">Palindrome</h4>
+<h3 id="palindrome">Palindrome</h3>
 <div class="highlight"><pre><span></span><code><span class="n">word</span> <span class="o">=</span> <span class="s2">&quot;racecar&quot;</span>
 <span class="n">palindrome</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">word</span><span class="p">:</span> <span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
+<span class="c1"># or</span>
+<span class="n">palindrome</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">word</span><span class="p">:</span> <span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
 <span class="n">palindrome</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
 <span class="c1"># True</span>
 </code></pre></div>
+<h3 id="random-social-security-number">Random Social Security Number</h3>
+<div class="highlight"><pre><span></span><code><span class="n">ssn</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">999</span><span class="p">))</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">99</span><span class="p">))</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">999</span><span class="p">))</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
 
+<span class="n">ssn</span><span class="p">()</span>
+<span class="c1"># 885-92-0191</span>
+</code></pre></div>
+<h3 id="random-phone-number">Random Phone number</h3>
+<div class="highlight"><pre><span></span><code><span class="n">phone</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;+</span><span class="si">{</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">99</span><span class="p">)</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">999</span><span class="p">))</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">999</span><span class="p">))</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">999</span><span class="p">))</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="n">phone</span><span class="p">()</span>
+<span class="c1"># +4-267-62-0151</span>
+</code></pre></div>
 <hr />
 <p><a id="ciphers-encryption"></a></p>
 <h3 id="ciphers-encryption">Ciphers / Encryption</h3>
-<h4 id="rot13-cipher-in-a-one-line-lambda">ROT13 Cipher in a one line lambda</h4>
-<div class="highlight"><pre><span></span><code><span class="n">rot13</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">word</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">l</span><span class="p">:</span> <span class="nb">chr</span><span class="p">(((</span><span class="nb">ord</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">-</span><span class="mi">84</span><span class="p">)</span> <span class="o">%</span> <span class="mi">26</span><span class="p">)</span> <span class="o">+</span> <span class="mi">97</span><span class="p">),</span> <span class="n">word</span><span class="p">)))</span>
+<h3 id="rot13-cipher-in-a-one-line-lambda">ROT13 Cipher in a one line lambda</h3>
+<div class="highlight"><pre><span></span><code><span class="n">rot13</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">word</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">l</span><span class="p">:</span> <span class="nb">chr</span><span class="p">(((</span><span class="nb">ord</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">-</span><span class="mi">84</span><span class="p">)</span> <span class="o">%</span> <span class="mi">26</span><span class="p">)</span> <span class="o">+</span> <span class="mi">97</span><span class="p">),</span> <span class="n">word</span><span class="p">))</span>
 <span class="n">rot13</span><span class="p">(</span><span class="s1">&#39;weattackatdawn&#39;</span><span class="p">)</span>
 <span class="c1"># jrnggnpxngqnja</span>
 <span class="n">rot13</span><span class="p">(</span><span class="s1">&#39;jrnggnpxngqnja&#39;</span><span class="p">)</span>
 <span class="c1"># weattackatdawn</span>
 </code></pre></div>
+<h3 id="xor-cipher">XOR Cipher</h3>
+<div class="highlight"><pre><span></span><code><span class="n">xor_cipher</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">message</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">^</span> <span class="nb">ord</span><span class="p">(</span><span class="n">k</span><span class="p">))</span> <span class="k">for</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">k</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">key</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="p">))])</span>
 
-<h4 id="one-time-pad-in-one-line-lambda-kinda">One-Time Pad in one line lambda (kinda)</h4>
+<span class="n">cipher</span> <span class="o">=</span> <span class="n">xor_cipher</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">,</span> <span class="s1">&#39;s3cR3tP@$sW0rD&#39;</span><span class="p">)</span>
+
+<span class="n">xor_cipher</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="s1">&#39;s3cR3tP@$sW0rD&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="one-time-pad-in-one-line-lambda-kinda">One-Time Pad in one line lambda (kinda)</h3>
 <p>TODO: add support for mod operation
 <div class="highlight"><pre><span></span><code><span class="c1"># Flat</span>
 <span class="n">otp</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">message</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">l</span><span class="p">:</span> <span class="p">(</span><span class="nb">chr</span><span class="p">(((</span><span class="nb">ord</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]))),</span> <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)),</span><span class="n">message</span><span class="p">))))))</span>
@@ -1520,7 +1820,7 @@ form, they are fast and easy to make into lambda functions.</p>
 <hr />
 <p><a id="data-conversions"></a></p>
 <h3 id="data-conversions">Data Conversions</h3>
-<h4 id="convert-lists-to-tuple-recursive">Convert lists to tuple (Recursive)</h4>
+<h3 id="convert-lists-to-tuple-recursive">Convert lists to tuple (Recursive)</h3>
 <p>Converting tuples or nested tuples into JSON changes tuples into lists, so loading back in would change the data types.
 This recursively goes through a list and converts inner lists into tuples.
 <div class="highlight"><pre><span></span><code><span class="c1"># Flat</span>
@@ -1546,16 +1846,24 @@ This recursively goes through a list and converts inner lists into tuples.
 <span class="n">data</span> <span class="o">=</span> <span class="n">tuple_it</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="c1"># (&#39;apple&#39;, &#39;banana&#39;, &#39;cherry&#39;, (&#39;this&#39;, &#39;that&#39;), ((&#39;inner&#39;, &#39;deep&#39;), &#39;stuff&#39;))</span>
 </code></pre></div></p>
+<h3 id="combinations">Combinations</h3>
+<div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="n">combination</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">:</span> <span class="p">[[</span><span class="n">a</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="p">(</span><span class="n">combination</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:])</span> <span class="ow">or</span> <span class="p">[[]])]</span>
+
+<span class="n">combination</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="c1"># [[1, 2, 3], [1, 3], [2, 3], [3]]</span>
+</code></pre></div>
 <hr />
 <p><a id="misc-math"></a></p>
 <h3 id="misc-math">Misc Math</h3>
-<h4 id="factoral-recursive">Factoral (Recursive)</h4>
+<h3 id="factoral-recursive">Factoral (Recursive)</h3>
 <p><a href="https://blog.finxter.com/python-one-liners/">blog.finxter</a>
 <div class="highlight"><pre><span></span><code><span class="n">factoral</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factoral</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">factoral</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 <span class="c1"># 3628800</span>
 </code></pre></div></p>
-<h4 id="mean">Mean</h4>
+<h3 id="mean">Mean</h3>
 <div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">99</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span><span class="mi">88</span><span class="p">,</span><span class="mi">111</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span><span class="mi">103</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span><span class="mi">94</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">85</span><span class="p">,</span><span class="mi">86</span><span class="p">]</span>
 
 <span class="n">mean</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
@@ -1563,8 +1871,7 @@ This recursively goes through a list and converts inner lists into tuples.
 <span class="n">mean</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="c1"># 89.76923076923077</span>
 </code></pre></div>
-
-<h4 id="median">Median</h4>
+<h3 id="median">Median</h3>
 <div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">99</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span><span class="mi">88</span><span class="p">,</span><span class="mi">111</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span><span class="mi">103</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span><span class="mi">94</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">85</span><span class="p">,</span><span class="mi">86</span><span class="p">]</span>
 
 <span class="n">median</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">A</span><span class="p">)[</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)]</span>
@@ -1572,8 +1879,7 @@ This recursively goes through a list and converts inner lists into tuples.
 <span class="n">median</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="c1"># 87</span>
 </code></pre></div>
-
-<h4 id="mode">Mode</h4>
+<h3 id="mode">Mode</h3>
 <div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">99</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span><span class="mi">88</span><span class="p">,</span><span class="mi">111</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span><span class="mi">103</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span><span class="mi">94</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">85</span><span class="p">,</span><span class="mi">86</span><span class="p">]</span>
 
 <span class="n">mode</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
@@ -1581,8 +1887,7 @@ This recursively goes through a list and converts inner lists into tuples.
 <span class="n">mode</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="c1"># 86</span>
 </code></pre></div>
-
-<h4 id="least-common-item-in-list">Least Common item in List</h4>
+<h3 id="least-common-item-in-list">Least Common item in List</h3>
 <div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">99</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span><span class="mi">88</span><span class="p">,</span><span class="mi">111</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span><span class="mi">103</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span><span class="mi">94</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">85</span><span class="p">,</span><span class="mi">86</span><span class="p">]</span>
 
 <span class="n">least_common_item</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
@@ -1590,14 +1895,12 @@ This recursively goes through a list and converts inner lists into tuples.
 <span class="n">least_common_item</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="c1"># 99</span>
 </code></pre></div>
-
-<h4 id="check-if-n-is-divisible-by-x-and-y">check if N is divisible by X AND Y</h4>
+<h3 id="check-if-n-is-divisible-by-x-and-y">check if N is divisible by X AND Y</h3>
 <div class="highlight"><pre><span></span><code><span class="n">n_divisible</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">all</span><span class="p">([</span><span class="nb">divmod</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">y</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">])</span>
 <span class="n">n_divisible</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 <span class="c1"># True</span>
 </code></pre></div>
-
-<h4 id="get-number-of-odd-numbers-below-n">Get number of odd numbers below N</h4>
+<h3 id="get-number-of-odd-numbers-below-n">Get number of odd numbers below N</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Faster</span>
 <span class="n">odd_below</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="nb">len</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">])</span>
 <span class="c1"># or a bit slower</span>
@@ -1605,8 +1908,7 @@ This recursively goes through a list and converts inner lists into tuples.
 <span class="n">odd_below</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
 <span class="c1"># 7</span>
 </code></pre></div>
-
-<h4 id="get-number-of-even-numbers-below-n">Get number of even numbers below N</h4>
+<h3 id="get-number-of-even-numbers-below-n">Get number of even numbers below N</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Faster</span>
 <span class="n">even_below</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="nb">len</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">])</span>
 <span class="c1"># or a bit slower</span>
@@ -1614,8 +1916,21 @@ This recursively goes through a list and converts inner lists into tuples.
 <span class="n">even_below</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
 <span class="c1"># 7</span>
 </code></pre></div>
+<h3 id="greatest-common-denominator">Greatest Common Denominator</h3>
+<div class="highlight"><pre><span></span><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">24503</span><span class="p">,</span> <span class="mi">321</span>
+<span class="n">gcd</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">a</span> <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">)</span>
 
-<h4 id="remove-outliers">Remove Outliers</h4>
+<span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="c1"># 107</span>
+</code></pre></div>
+<h3 id="euler-totient">Euler Totient</h3>
+<div class="highlight"><pre><span></span><code><span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">13</span>
+<span class="n">euler_totient</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">:</span> <span class="p">(</span><span class="n">p</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">q</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">euler_totient</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span>
+<span class="c1"># 72</span>
+</code></pre></div>
+<h3 id="remove-outliers">Remove Outliers</h3>
 <p>Filter list down by those within N standard deviations of the mean
 <div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
 <span class="c1"># Mean is 10.692307692307692</span>
@@ -1629,54 +1944,147 @@ This recursively goes through a list and converts inner lists into tuples.
 <span class="n">remove_outliers</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>
 <span class="c1"># [10, 10, 9, 9, 9]</span>
 </code></pre></div></p>
-                
-              
-              
-                
+<h3 id="least-squares-regression">Least Squares Regression</h3>
+<p>Calculate the least squares regression line given two lists</p>
+<div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+
+<span class="c1"># Flat</span>
+<span class="n">lsr</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">:</span> <span class="p">[(</span><span class="n">sum_ab</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">-</span> <span class="n">sum_a</span> <span class="o">*</span> <span class="n">sum_b</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">sum_aa</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">-</span> <span class="n">sum_a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">i</span> <span class="o">+</span> <span class="p">(</span><span class="n">sum_b</span> <span class="o">-</span> <span class="p">(</span><span class="n">sum_ab</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">-</span> <span class="n">sum_a</span> <span class="o">*</span> <span class="n">sum_b</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">sum_aa</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">-</span> <span class="n">sum_a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">sum_a</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sum_a</span><span class="p">,</span> <span class="n">sum_b</span><span class="p">,</span> <span class="n">sum_aa</span><span class="p">,</span> <span class="n">sum_ab</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">ai</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="nb">sum</span><span class="p">(</span><span class="n">B</span><span class="p">),</span> <span class="nb">sum</span><span class="p">([</span><span class="n">ai</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">ai</span> <span class="ow">in</span> <span class="n">A</span><span class="p">]),</span> <span class="nb">sum</span><span class="p">([</span><span class="n">ai</span> <span class="o">*</span> <span class="n">bi</span> <span class="k">for</span> <span class="n">ai</span><span class="p">,</span> <span class="n">bi</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)]),)</span> <span class="k">for</span> <span class="n">ai</span> <span class="ow">in</span> <span class="n">A</span><span class="p">]]</span>
 
 
-              
-            </article>
-          </div>
+<span class="c1"># Black format</span>
+<span class="n">lsr</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">(</span><span class="n">sum_ab</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">-</span> <span class="n">sum_a</span> <span class="o">*</span> <span class="n">sum_b</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">sum_aa</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">-</span> <span class="n">sum_a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">i</span>
+    <span class="o">+</span> <span class="p">(</span>
+        <span class="n">sum_b</span>
+        <span class="o">-</span> <span class="p">(</span><span class="n">sum_ab</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">-</span> <span class="n">sum_a</span> <span class="o">*</span> <span class="n">sum_b</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">sum_aa</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">-</span> <span class="n">sum_a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">sum_a</span>
+    <span class="p">)</span>
+    <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sum_a</span><span class="p">,</span> <span class="n">sum_b</span><span class="p">,</span> <span class="n">sum_aa</span><span class="p">,</span> <span class="n">sum_ab</span> <span class="ow">in</span> <span class="p">[</span>
+        <span class="p">(</span>
+            <span class="n">ai</span><span class="p">,</span>
+            <span class="nb">sum</span><span class="p">(</span><span class="n">A</span><span class="p">),</span>
+            <span class="nb">sum</span><span class="p">(</span><span class="n">B</span><span class="p">),</span>
+            <span class="nb">sum</span><span class="p">([</span><span class="n">ai</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">ai</span> <span class="ow">in</span> <span class="n">A</span><span class="p">]),</span>
+            <span class="nb">sum</span><span class="p">([</span><span class="n">ai</span> <span class="o">*</span> <span class="n">bi</span> <span class="k">for</span> <span class="n">ai</span><span class="p">,</span> <span class="n">bi</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)]),</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">ai</span> <span class="ow">in</span> <span class="n">A</span>
+    <span class="p">]</span>
+<span class="p">]</span>
+
+
+<span class="n">lsr</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+<span class="c1"># [3.341463414634146, 4.859756097560975, 7.896341463414634, 10.932926829268293, 13.96951219512195]</span>
+</code></pre></div>
+<h3 id="fisher-jenks-natural-breaks-work-in-progress">Fisher Jenks Natural Breaks (Work in Progress)</h3>
+<div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1500</span><span class="p">,</span> <span class="mi">2100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">1100</span><span class="p">,</span> <span class="mi">950</span><span class="p">,</span> <span class="mi">1300</span><span class="p">,</span> <span class="mi">1400</span><span class="p">]</span>
+
+<span class="c1"># Flat</span>
+<span class="n">jenks</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">:</span> <span class="nb">min</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;split&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="nb">sum</span><span class="p">([(</span><span class="nb">sum</span><span class="p">([(</span><span class="n">ia</span> <span class="o">-</span> <span class="nb">sum</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">ia</span> <span class="ow">in</span> <span class="n">i</span><span class="p">]))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])},</span> <span class="p">[[</span><span class="nb">sorted</span><span class="p">(</span><span class="n">A</span><span class="p">)[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">N</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="n">N</span><span class="p">)]</span> <span class="k">for</span> <span class="n">N</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)]),</span> <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">k</span><span class="p">:</span> <span class="n">k</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;split&#39;</span><span class="p">)</span>
+
+<span class="c1"># Black</span>
+<span class="n">jenks</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">:</span> <span class="nb">min</span><span class="p">(</span>
+    <span class="nb">map</span><span class="p">(</span>
+        <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;split&quot;</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="nb">sum</span><span class="p">([(</span><span class="nb">sum</span><span class="p">([(</span><span class="n">ia</span> <span class="o">-</span> <span class="nb">sum</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">ia</span> <span class="ow">in</span> <span class="n">i</span><span class="p">]))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]),</span>
+        <span class="p">},</span>
+        <span class="p">[</span>
+            <span class="p">[</span><span class="nb">sorted</span><span class="p">(</span><span class="n">A</span><span class="p">)[</span><span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">N</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="n">N</span><span class="p">)]</span>
+            <span class="k">for</span> <span class="n">N</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">],</span>
+    <span class="p">),</span>
+    <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">k</span><span class="p">:</span> <span class="n">k</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;split&quot;</span><span class="p">)</span>
+
+<span class="n">jenks</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="c1"># [[20, 50, 75], [950, 1100, 1300], [1400, 1500, 2100]]</span>
+<span class="n">jenks</span><span class="p">(</span><span class="n">A</span> <span class="p">)</span>
+</code></pre></div>
+<h3 id="distance-between-points-pythagorean-2d-and-3d-space">Distance Between Points (Pythagorean 2D and 3D space)</h3>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">pythagorean</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">i</span><span class="p">:</span> <span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">))))</span><span class="o">**</span><span class="mf">0.5</span>
+
+<span class="n">pythagorean</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="c1"># 7.810249675906654</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+
+<span class="n">pythagorean</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="c1"># 5.916079783099616</span>
+</code></pre></div>
+<h3 id="perceptron-wip">Perceptron (WIP)</h3>
+<div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">B</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">lsr</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">(</span><span class="n">sum_ab</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">-</span> <span class="n">sum_a</span> <span class="o">*</span> <span class="n">sum_b</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">sum_aa</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">-</span> <span class="n">sum_a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">i</span>
+    <span class="o">+</span> <span class="p">(</span>
+        <span class="n">sum_b</span>
+        <span class="o">-</span> <span class="p">(</span><span class="n">sum_ab</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">-</span> <span class="n">sum_a</span> <span class="o">*</span> <span class="n">sum_b</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">sum_aa</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">-</span> <span class="n">sum_a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">sum_a</span>
+    <span class="p">)</span>
+    <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sum_a</span><span class="p">,</span> <span class="n">sum_b</span><span class="p">,</span> <span class="n">sum_aa</span><span class="p">,</span> <span class="n">sum_ab</span> <span class="ow">in</span> <span class="p">[</span>
+        <span class="p">(</span>
+            <span class="n">ai</span><span class="p">,</span>
+            <span class="nb">sum</span><span class="p">(</span><span class="n">A</span><span class="p">),</span>
+            <span class="nb">sum</span><span class="p">(</span><span class="n">B</span><span class="p">),</span>
+            <span class="nb">sum</span><span class="p">([</span><span class="n">ai</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">ai</span> <span class="ow">in</span> <span class="n">A</span><span class="p">]),</span>
+            <span class="nb">sum</span><span class="p">([</span><span class="n">ai</span> <span class="o">*</span> <span class="n">bi</span> <span class="k">for</span> <span class="n">ai</span><span class="p">,</span> <span class="n">bi</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)]),</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">ai</span> <span class="ow">in</span> <span class="n">A</span>
+    <span class="p">]</span>
+<span class="p">]</span>
+</code></pre></div>
+<h3 id="probability">Probability</h3>
+<div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">probability</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">,</span> <span class="n">A</span><span class="p">:</span> <span class="n">A</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="n">probability</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>
+<span class="c1"># 0.2</span>
+</code></pre></div>
+<h2 id="cli-commands">CLI commands</h2>
+<h3 id="host-a-web-server-at-current-directory">host a web server at current directory</h3>
+<div class="highlight"><pre><span></span><code>python -m http.server
+</code></pre></div>
+<h3 id="display-documentation-for-a-python-module">display documentation for a python module</h3>
+<div class="highlight"><pre><span></span><code>python -m pydoc module
+</code></pre></div>
+<h3 id="precompile-python-code-to-bytecode">precompile python code to bytecode</h3>
+<div class="highlight"><pre><span></span><code>python -m py_compile minimath.py
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
       
-        
-<footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../blogs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Blogs" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Blogs
-            </div>
-          </div>
-        </a>
-      
-      
-    </nav>
+        <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        
-          Made with
-          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-            Material for MkDocs
-          </a>
-        
-        
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
@@ -1686,10 +2094,11 @@ This recursively goes through a list and converts inner lists into tuples.
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   </body>
