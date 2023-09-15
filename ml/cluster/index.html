@@ -12,13 +12,13 @@
         <meta name="author" content="Brian McCrillis">
       
       
-        <link rel="canonical" href="https://projects.brianmccrillis.com/crypto/steganography/">
+        <link rel="canonical" href="https://projects.brianmccrillis.com/ml/cluster/">
       
       
-        <link rel="prev" href="../hashing/">
+        <link rel="prev" href="../ml/">
       
       
-        <link rel="next" href="../../blogs/blogs/">
+        <link rel="next" href="../../nlp/nlp/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Steganography - PyToolbox</title>
+        <title>Clustering - PyToolbox</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#steganography" class="md-skip">
+        <a href="#clustering" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Steganography
+              Clustering
             
           </span>
         </div>
@@ -851,6 +851,8 @@
                 
   
   
+    
+  
   
     
     
@@ -861,13 +863,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
             
@@ -880,7 +882,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             ML
@@ -893,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ml/ml/" class="md-nav__link">
+      <a href="../ml/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -911,9 +913,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../ml/cluster/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Clustering
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -922,6 +944,73 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#clustering-methods" class="md-nav__link">
+    Clustering Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Clustering Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#k-means" class="md-nav__link">
+    k-means
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-number-of-clusters" class="md-nav__link">
+    Finding number of Clusters
+  </a>
+  
+    <nav class="md-nav" aria-label="Finding number of Clusters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elbow-method" class="md-nav__link">
+    Elbow Method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bayesian-information-criterion-bic" class="md-nav__link">
+    Bayesian Information Criterion (BIC)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -959,8 +1048,6 @@
                 
   
   
-    
-  
   
     
     
@@ -973,13 +1060,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
         
           <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
             
@@ -992,7 +1079,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             Crypto
@@ -1005,7 +1092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../encryption/" class="md-nav__link">
+      <a href="../../crypto/encryption/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1025,7 +1112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hashing/" class="md-nav__link">
+      <a href="../../crypto/hashing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1043,29 +1130,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Steganography
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../crypto/steganography/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1074,46 +1141,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#bi-tools" class="md-nav__link">
-    BI Tools
-  </a>
-  
-    <nav class="md-nav" aria-label="BI Tools">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rawgraphs" class="md-nav__link">
-    RawGraphs
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1201,16 +1228,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bi-tools" class="md-nav__link">
-    BI Tools
+  <a href="#clustering-methods" class="md-nav__link">
+    Clustering Methods
   </a>
   
-    <nav class="md-nav" aria-label="BI Tools">
+    <nav class="md-nav" aria-label="Clustering Methods">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rawgraphs" class="md-nav__link">
-    RawGraphs
+  <a href="#k-means" class="md-nav__link">
+    k-means
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-number-of-clusters" class="md-nav__link">
+    Finding number of Clusters
+  </a>
+  
+    <nav class="md-nav" aria-label="Finding number of Clusters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elbow-method" class="md-nav__link">
+    Elbow Method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bayesian-information-criterion-bic" class="md-nav__link">
+    Bayesian Information Criterion (BIC)
   </a>
   
 </li>
@@ -1235,13 +1289,54 @@
                   
 
 
-<h1 id="steganography">Steganography</h1>
-<p><a href="https://www.investopedia.com/terms/b/business-intelligence-bi.asp">Definition</a></p>
+<h1 id="clustering">Clustering</h1>
+<p>Grouping related examples, particularly during unsupervised learning. Once all the examples are grouped, a human can optionally supply meaning to each cluster.</p>
+<p><a href="https://developers.google.com/machine-learning/glossary#clustering">Definition</a></p>
 <hr />
-<h2 id="bi-tools">BI Tools</h2>
-<h3 id="rawgraphs">RawGraphs</h3>
-<p>RAW Graphs is an open source data visualization framework built with the goal of making the visual representation of complex data easy for everyone.</p>
-<p>Primarily conceived as a tool for designers and vis geeks, RAW Graphs aims at providing a missing link between spreadsheet applications (e.g. Microsoft Excel, Apple Numbers, OpenRefine) and vector graphics editors (e.g. Adobe Illustrator, Inkscape, Sketch).</p>
+<h2 id="clustering-methods">Clustering Methods</h2>
+<h3 id="k-means">k-means</h3>
+<p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html?highlight=isolation#sklearn.ensemble.IsolationForest">Documentation</a></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_blobs</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">quantile</span><span class="p">,</span> <span class="n">random</span><span class="p">,</span> <span class="n">where</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">IsolationForest</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</code></pre></div>
+<p><a href="https://machinelearningmastery.com/anomaly-detection-with-isolation-forest-and-kernel-density-estimation/">More Info</a></p>
+<hr />
+<h2 id="finding-number-of-clusters">Finding number of Clusters</h2>
+<p><img alt="" src="https://miro.medium.com/max/4800/1*fUL29zNVjR2dh99yfD2auA.webp" /></p>
+<h3 id="elbow-method">Elbow Method</h3>
+<h3 id="bayesian-information-criterion-bic">Bayesian Information Criterion (BIC)</h3>
+<p><a href="https://towardsdatascience.com/are-you-still-using-the-elbow-method-5d271b3063bd">Documentation</a></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">bic_score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  BIC score for the goodness of fit of clusters.</span>
+<span class="sd">  This Python function is directly translated from the GoLang code made by the author of the paper. </span>
+<span class="sd">  The original code is available here: https://github.com/bobhancock/goxmeans/blob/a78e909e374c6f97ddd04a239658c7c5b7365e5c/km.go#L778</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="n">n_points</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+  <span class="n">n_clusters</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">labels</span><span class="p">))</span>
+  <span class="n">n_dimensions</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+  <span class="n">n_parameters</span> <span class="o">=</span> <span class="p">(</span><span class="n">n_clusters</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">n_dimensions</span> <span class="o">*</span> <span class="n">n_clusters</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+
+  <span class="n">loglikelihood</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">for</span> <span class="n">label_name</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="n">labels</span><span class="p">):</span>
+    <span class="n">X_cluster</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">labels</span> <span class="o">==</span> <span class="n">label_name</span><span class="p">]</span>
+    <span class="n">n_points_cluster</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_cluster</span><span class="p">)</span>
+    <span class="n">centroid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">X_cluster</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">variance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">X_cluster</span> <span class="o">-</span> <span class="n">centroid</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X_cluster</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">loglikelihood</span> <span class="o">+=</span> \
+      <span class="n">n_points_cluster</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">n_points_cluster</span><span class="p">)</span> \
+      <span class="o">-</span> <span class="n">n_points_cluster</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">n_points</span><span class="p">)</span> \
+      <span class="o">-</span> <span class="n">n_points_cluster</span> <span class="o">*</span> <span class="n">n_dimensions</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">variance</span><span class="p">)</span> \
+      <span class="o">-</span> <span class="p">(</span><span class="n">n_points_cluster</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+
+  <span class="n">bic</span> <span class="o">=</span> <span class="n">loglikelihood</span> <span class="o">-</span> <span class="p">(</span><span class="n">n_parameters</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">n_points</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">bic</span>
+</code></pre></div>
 
 
 
