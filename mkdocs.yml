@@ -55,6 +55,7 @@ nav:
       - ml/ml.md
       - ml/cluster.md
     - NLP: nlp/nlp.md
+    - Web: web/webscraping.md
     - Crypto:
         -  crypto/encryption.md
         -  crypto/hashing.md

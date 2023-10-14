@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://projects.brianmccrillis.com/web/webscraping/">
       
       
+        <link rel="prev" href="../../nlp/nlp/">
+      
+      
+        <link rel="next" href="../../crypto/encryption/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +26,7 @@
     
     
       
-        <title>Web Scraping - PyToolbox</title>
+        <title>Web - PyToolbox</title>
       
     
     
@@ -103,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Web Scraping
+              Web
             
           </span>
         </div>
@@ -190,22 +194,28 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../data/eda/" class="md-tabs__link">
           
   
@@ -299,6 +309,8 @@
       
   
   
+    
+  
   
     
     
@@ -321,15 +333,17 @@
       
         
       
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -342,7 +356,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             ToolBox
@@ -947,6 +961,134 @@
                 
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Web
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Web
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#finding-pages-you-want" class="md-nav__link">
+    Finding pages you want
+  </a>
+  
+    <nav class="md-nav" aria-label="Finding pages you want">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#robotstxt" class="md-nav__link">
+    robots.txt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sitemapxml" class="md-nav__link">
+    sitemap.xml
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requests" class="md-nav__link">
+    Requests
+  </a>
+  
+    <nav class="md-nav" aria-label="Requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requests_1" class="md-nav__link">
+    requests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-tips" class="md-nav__link">
+    JSON tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-copy-as-curl" class="md-nav__link">
+    Using Copy as cURL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-creative-with-urls" class="md-nav__link">
+    Getting creative with URLs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
     
     
@@ -965,9 +1107,9 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
         
-          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -978,8 +1120,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
             <span class="md-nav__icon md-icon"></span>
             Crypto
           </label>
