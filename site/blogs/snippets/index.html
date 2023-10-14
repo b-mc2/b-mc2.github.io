@@ -1882,7 +1882,7 @@ This recursively goes through a list and converts inner lists into tuples.
 <h3 id="mode">Mode</h3>
 <div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">99</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span><span class="mi">88</span><span class="p">,</span><span class="mi">111</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span><span class="mi">103</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span><span class="mi">94</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">85</span><span class="p">,</span><span class="mi">86</span><span class="p">]</span>
 
-<span class="n">mode</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
+<span class="n">mode</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">:</span> <span class="nb">max</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
 
 <span class="n">mode</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="c1"># 86</span>
@@ -1890,7 +1890,7 @@ This recursively goes through a list and converts inner lists into tuples.
 <h3 id="least-common-item-in-list">Least Common item in List</h3>
 <div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">99</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span><span class="mi">88</span><span class="p">,</span><span class="mi">111</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span><span class="mi">103</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span><span class="mi">94</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">85</span><span class="p">,</span><span class="mi">86</span><span class="p">]</span>
 
-<span class="n">least_common_item</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
+<span class="n">least_common_item</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">A</span><span class="p">:</span> <span class="nb">min</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
 
 <span class="n">least_common_item</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="c1"># 99</span>

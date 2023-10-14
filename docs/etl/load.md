@@ -27,3 +27,29 @@ some_dict = {'Name':"Alice"}
 
 print(json.dumps(some_dict), file=open("logs.jsonl", "a"))
 ```
+
+---
+## Pyspark
+### Write to delta table
+```python
+import pyspark.sql.functions as F
+import pyspark.sql.types as T
+import pyspark.sql.dataframe
+
+# read table
+df = (spark.read.table("database.table_name"))
+
+## Do transformations
+
+# write it back
+(
+    df.write
+    .format('delta')
+    .mode('append') # or overwrite
+    .option('overwriteSchema', 'true')
+    .saveAsTable('database.table_name')
+)
+
+# Create table if it doesn't exists and point towards the delta tables (parquet)
+spark.sql(f"CREATE TABLE IF NOT EXISTS database.table_name using delta location 'path/to/delta/tables/'")
+```

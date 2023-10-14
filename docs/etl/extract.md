@@ -301,12 +301,37 @@ print(df)
 ### PySpark
 [Documentation](https://pandas.pydata.org/docs/)
 
-
+#### Reading csv files
 ```python
 # import the modules
+import pyspark.sql.functions as F
+import pyspark.sql.types as T
+import pyspark.sql.dataframe
 
+file_path = "/path/to/file.csv"
+
+df = (
+    spark.read.csv(
+        path=file_path, 
+        sep=",", 
+        inferSchema=True, 
+        header=True
+    )
+)
 ```
 
+#### Reading tables
+```python
+# import the modules
+import pyspark.sql.functions as F
+import pyspark.sql.types as T
+import pyspark.sql.dataframe
+
+
+df = (spark.read.table("database.table_name"))
+
+df.select('*', '_metadata')
+```
 
 ---
 ## Flat Files

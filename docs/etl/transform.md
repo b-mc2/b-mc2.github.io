@@ -29,6 +29,15 @@ works_data = json_normalize(data = df['programs'],
 
 ---
 
+### Get only numeric columns from dataframe
+```python
+df = pd.read_csv("data.csv")
+numeric_columns = df.select_dtypes(include=['number'])
+
+```
+
+---
+
 ### JSONL
 [Documentation](https://jsonlines.org/examples/)
 
@@ -46,3 +55,19 @@ df = pd.read_json(jsonl_file, lines=True)
 
 ---
 [JSONL]: ../data/fileformats.md#JSONL
+
+
+## Pyspark
+### Add new/rename columns
+```python
+import pyspark.sql.functions as F
+import pyspark.sql.types as T
+import pyspark.sql.dataframe
+import datetime
+
+df = df.withColumn('Todays_Date', F.lit(datetime.datetime.now()))
+
+## Lowercase column names
+for col in df.columns:
+    df = df.withColumnRenamed(col, col.lower())
+```

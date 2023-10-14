@@ -836,7 +836,7 @@ median(A)
 ```python
 A = [99,86,87,88,111,86,103,87,94,78,77,85,86]
 
-mode = max(A, key=A.count)
+mode = lambda A: max(A, key=A.count)
 
 mode(A)
 # 86
@@ -846,7 +846,7 @@ mode(A)
 ```python
 A = [99,86,87,88,111,86,103,87,94,78,77,85,86]
 
-least_common_item = min(A, key=A.count)
+least_common_item = lambda A: min(A, key=A.count)
 
 least_common_item(A)
 # 99
