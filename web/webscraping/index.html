@@ -1120,6 +1120,82 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#finding-pages-you-want" class="md-nav__link">
+    Finding pages you want
+  </a>
+  
+    <nav class="md-nav" aria-label="Finding pages you want">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#robotstxt" class="md-nav__link">
+    robots.txt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sitemapxml" class="md-nav__link">
+    sitemap.xml
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requests" class="md-nav__link">
+    Requests
+  </a>
+  
+    <nav class="md-nav" aria-label="Requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requests_1" class="md-nav__link">
+    requests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-tips" class="md-nav__link">
+    JSON tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-copy-as-curl" class="md-nav__link">
+    Using Copy as cURL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-creative-with-urls" class="md-nav__link">
+    Getting creative with URLs
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1134,8 +1210,109 @@
 
 
 <h1 id="web-scraping">Web Scraping</h1>
-<p>More coming... </p>
-<p>This might just be Extract within ETL</p>
+<h3 id="finding-pages-you-want">Finding pages you want</h3>
+<h4 id="robotstxt">robots.txt</h4>
+<p>When looking for a list of pages from a website you want to scrape. Start with the <code>robots.txt</code> file. You should be able 
+to find this file at the root domain such as <code>https://example.com/robots.txt</code> this file, if it exists, will show you a list 
+of pages that the site does not want you to scrape, or sets useragent limits for those pages. It's best to abide by these 
+requests as you don't want to get your IP address banned or ruin things for others. The robots.txt file should also show 
+you where the sitemap is located. Often it's just located at <code>https://example.com/sitemap.xml</code> but could have other names. </p>
+<h4 id="sitemapxml">sitemap.xml</h4>
+<p>The sitemap is a literal list of webpages within that site. It may not be <em>all</em> of them, but it's at least the ones the site 
+deems valuable enough to get indexed by search engines. The sitemap is usually xml but may be json or rss. You can use 
+BeautifulSoup to parse this into a list of URLs you want to scrape.</p>
+<h3 id="requests">Requests</h3>
+<p>Requests is often used to download webpages in their raw format, using a simple GET request.</p>
+<p><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://example.com&quot;</span>
+<span class="c1">## giving a user agent to requests is a simple and effective way to not get rejected as a bot</span>
+<span class="n">useragent</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727)&#39;</span><span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">useragent</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span> <span class="c1"># or if response.ok</span>
+    <span class="n">data_bytes</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">content</span> <span class="c1"># bytes, fine for bs4</span>
+    <span class="n">data_str</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span> <span class="c1"># string</span>
+    <span class="n">data_json</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span> <span class="c1"># only if json-able, becomes python dict</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error on </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+Now that you have the page data, assuming it is HTML or XML, we can parse it with beautiful soup
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span> <span class="k">as</span> <span class="n">bs</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">bs</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="n">raw_page_text</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">text</span> <span class="c1"># or soup.getText() both will probably have a lot of \n</span>
+<span class="n">p_tags</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">)</span> <span class="c1"># iterable</span>
+<span class="n">some_id</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;target-id&#39;</span><span class="p">})</span> <span class="c1"># single/first value</span>
+</code></pre></div>
+More info here:</p>
+<h4 id="requests_1"><a href="./etl/extract.md#sub-section">requests</a></h4>
+<h3 id="json-tips">JSON tips</h3>
+<p>Websites load data in chunks and leave it up to your browser to assemble them properly, often some of those chunks
+are JSON files for a client-side Javascript framework to assemble. This is really convenient as if the data you need 
+is located in those files, you could just scrape the file itself and convert directly to a python dictionary instead of 
+downloading the entire page and parsing the HTML.</p>
+<p>Open the browser dev tools and select the Network tab at the top, then select the Fetch/XHR tab a little below that. 
+This will filter all the loaded resources by those that include JSON files. If you don't see any, leave dev tools window 
+open and reload the page (ctrl+shift+r to reload cached data too) you should then see JSON resources. You can left click 
+these and see a preview of the data which should allow you to go through and confirm the data you want is available. The 
+Headers tab should also indicate what is needed to get the data but it's easier to just right click the file and open in 
+a new tab, if the data is visible in the tab using a GET request with at most a useragent is probably all you'll need.</p>
+<p>You can then use the URL to this resource in Requests to get the data and use <code>response.json()</code> to convert to a dictionary. 
+This is a huge benefit as the data is already formatted in a way that is easily worked with, and it also is significantly 
+faster and lighter than downloading the entire page and parsing with BeautifulSoup.</p>
+<hr />
+<h3 id="using-copy-as-curl">Using Copy as cURL</h3>
+<p>Sometimes there's a lot of requirements to be met before a server will provide you any data. 
+A good way to handle this is to load the page normally in your browser and open the dev tools window.
+From there, locate the file you want to scrape and right click it, then select the copy dropdown and 'copy as cURL'</p>
+<p><img alt="" src="https://curlconverter.com/images/chrome.webp" />
+Here's a screenshot from cURL converter (linked below)</p>
+<p>From there visit the <a href="https://curlconverter.com/">cURL converter</a> site and paste the data. This will conver the cURL
+command into Python (or other languages) and will include all the needed metadata/cookies etc to get the resource in python</p>
+<p>For example copying this:
+<div class="highlight"><pre><span></span><code>curl &#39;http://en.wikipedia.org/&#39; \
+    -H &#39;Accept-Encoding: gzip, deflate, sdch&#39; \
+    -H &#39;Accept-Language: en-US,en;q=0.8&#39; \
+    -H &#39;User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36&#39; \
+    -H &#39;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#39; \
+    -H &#39;Referer: http://www.wikipedia.org/&#39; \
+    -H &#39;Connection: keep-alive&#39; --compressed
+</code></pre></div>
+Becomes this
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1"># &#39;Accept-Encoding&#39;: &#39;gzip, deflate, sdch&#39;,</span>
+    <span class="s1">&#39;Accept-Language&#39;</span><span class="p">:</span> <span class="s1">&#39;en-US,en;q=0.8&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Referer&#39;</span><span class="p">:</span> <span class="s1">&#39;http://www.wikipedia.org/&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Connection&#39;</span><span class="p">:</span> <span class="s1">&#39;keep-alive&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://en.wikipedia.org/&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+</code></pre></div></p>
+<hr />
+<h3 id="getting-creative-with-urls">Getting creative with URLs</h3>
+<p>Take a look at the URLs you're parsing and look for the components they are made from. Do they use arguments? Is it a hashed mess?
+It can help you discover new resources or easier ways to iterate through the ones you have found. This is especially true 
+of JSON files.</p>
+<p>For example, below indicates that the data on the page starts at <code>offset=0</code> and has <code>count=25</code> values. We can loop through 
+and modify this URL to get new data, like increasing the count and then the offset by that count. Or we can change <code>etfs</code> 
+to another value, like <code>commodities</code>
+<code>https://finance.yahoo.com/etfs?offset=0&amp;count=25</code></p>
+<p><div class="highlight"><pre><span></span><code><span class="n">url_template</span> <span class="o">=</span> <span class="s2">&quot;https://finance.yahoo.com/etfs?offset=</span><span class="si">{}</span><span class="s2">&amp;count=</span><span class="si">{}</span><span class="s2">&quot;</span>
+<span class="n">new_count</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">MAX_VALUE</span> <span class="o">=</span> <span class="mi">10_000</span> <span class="c1"># check the page for the max</span>
+
+<span class="n">new_urls</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">url_template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">new_count</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">offset</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">MAX_VALUE</span><span class="p">,</span> <span class="n">new_count</span><span class="p">)</span>
+<span class="p">]</span>
+</code></pre></div>
+You can then loop through scrape each url within the <code>new_urls</code> list. But depending on the amount of requests you're making 
+and the size of the resource you're downloading, you may want to add a delay between requests.</p>
 
 
 

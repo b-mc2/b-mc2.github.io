@@ -694,6 +694,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pyspark" class="md-nav__link">
+    Pyspark
+  </a>
+  
+    <nav class="md-nav" aria-label="Pyspark">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#write-to-delta-table" class="md-nav__link">
+    Write to delta table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1222,6 +1242,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pyspark" class="md-nav__link">
+    Pyspark
+  </a>
+  
+    <nav class="md-nav" aria-label="Pyspark">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#write-to-delta-table" class="md-nav__link">
+    Write to delta table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1258,6 +1298,30 @@ following will build valid <code>JSONL</code> documents.</p>
 <div class="highlight"><pre><span></span><code><span class="n">some_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span><span class="s2">&quot;Alice&quot;</span><span class="p">}</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">some_dict</span><span class="p">),</span> <span class="n">file</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;logs.jsonl&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">))</span>
+</code></pre></div>
+<hr />
+<h2 id="pyspark">Pyspark</h2>
+<h3 id="write-to-delta-table">Write to delta table</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pyspark.sql.functions</span> <span class="k">as</span> <span class="nn">F</span>
+<span class="kn">import</span> <span class="nn">pyspark.sql.types</span> <span class="k">as</span> <span class="nn">T</span>
+<span class="kn">import</span> <span class="nn">pyspark.sql.dataframe</span>
+
+<span class="c1"># read table</span>
+<span class="n">df</span> <span class="o">=</span> <span class="p">(</span><span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;database.table_name&quot;</span><span class="p">))</span>
+
+<span class="c1">## Do transformations</span>
+
+<span class="c1"># write it back</span>
+<span class="p">(</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">write</span>
+    <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;delta&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s1">&#39;append&#39;</span><span class="p">)</span> <span class="c1"># or overwrite</span>
+    <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s1">&#39;overwriteSchema&#39;</span><span class="p">,</span> <span class="s1">&#39;true&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s1">&#39;database.table_name&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1"># Create table if it doesn&#39;t exists and point towards the delta tables (parquet)</span>
+<span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;CREATE TABLE IF NOT EXISTS database.table_name using delta location &#39;path/to/delta/tables/&#39;&quot;</span><span class="p">)</span>
 </code></pre></div>
 
 

@@ -670,8 +670,35 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#get-only-numeric-columns-from-dataframe" class="md-nav__link">
+    Get only numeric columns from dataframe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#jsonl" class="md-nav__link">
     JSONL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyspark" class="md-nav__link">
+    Pyspark
+  </a>
+  
+    <nav class="md-nav" aria-label="Pyspark">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-newrename-columns" class="md-nav__link">
+    Add new/rename columns
   </a>
   
 </li>
@@ -1225,8 +1252,35 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#get-only-numeric-columns-from-dataframe" class="md-nav__link">
+    Get only numeric columns from dataframe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#jsonl" class="md-nav__link">
     JSONL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyspark" class="md-nav__link">
+    Pyspark
+  </a>
+  
+    <nav class="md-nav" aria-label="Pyspark">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-newrename-columns" class="md-nav__link">
+    Add new/rename columns
   </a>
   
 </li>
@@ -1274,6 +1328,11 @@
 <span class="c1"># Also pass the parent metadata we wanted to append</span>
 </code></pre></div>
 <hr />
+<h3 id="get-only-numeric-columns-from-dataframe">Get only numeric columns from dataframe</h3>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data.csv&quot;</span><span class="p">)</span>
+<span class="n">numeric_columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;number&#39;</span><span class="p">])</span>
+</code></pre></div>
+<hr />
 <h3 id="jsonl">JSONL</h3>
 <p><a href="https://jsonlines.org/examples/">Documentation</a></p>
 <p>Pandas can work with <code>JSONL</code> as well </p>
@@ -1286,6 +1345,19 @@
 </code></pre></div>
 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_json.html">Additional Info</a></p>
 <hr />
+<h2 id="pyspark">Pyspark</h2>
+<h3 id="add-newrename-columns">Add new/rename columns</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pyspark.sql.functions</span> <span class="k">as</span> <span class="nn">F</span>
+<span class="kn">import</span> <span class="nn">pyspark.sql.types</span> <span class="k">as</span> <span class="nn">T</span>
+<span class="kn">import</span> <span class="nn">pyspark.sql.dataframe</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s1">&#39;Todays_Date&#39;</span><span class="p">,</span> <span class="n">F</span><span class="o">.</span><span class="n">lit</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()))</span>
+
+<span class="c1">## Lowercase column names</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumnRenamed</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">col</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+</code></pre></div>
 
 
 
